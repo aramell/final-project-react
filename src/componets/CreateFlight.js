@@ -5,8 +5,11 @@ class CreateFlight extends React.Component{
     super(props)
 
     this.state = {
-      flightTime: '',
-      planeNumber: '',
+      flights: [],
+          // flightTime: '',
+          // date: '',
+          // planeNumber: '',
+
     }
     
   }
@@ -14,8 +17,7 @@ class CreateFlight extends React.Component{
     
     const value = event.target.value
     const name = event.target.name
-    // const name = event.target.name
-    // const value = event.target.value
+
     this.setState({
       [name]: value
     })
@@ -31,12 +33,15 @@ class CreateFlight extends React.Component{
       <div className="flight">
       <h1> Create Flight </h1>
       <form className="createFlight" onSubmit={(event) => this.handleSubmit(event)}>
+      <label>Date </label>
+      <ul><input type="text" name="date" onChange={this.handleChange}/> </ul>
       <label>Flight Time </label>
       <ul><input type="textarea" name="flightTime"  onChange={this.handleChange} /> </ul>
          <label>Plane number </label>
        <ul>  <input type="textarea" name="planeNumber" onChange={this.handleChange}/> </ul>
          <button type="submit"> Submit </button>
       </form>
+      <Flight flights={this.state.flights} />
       </div>
     )
   }
