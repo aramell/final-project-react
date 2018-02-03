@@ -5,7 +5,7 @@ import React, {Component} from 'react'
 // }
 
 // const fetchWeather = () =>{
-  const url = 'https://avwx.rest/api/metar/KMMU'
+  const url = 'https://avwx.rest/api/metar/'
 //   fetch(url)
 //   .then(res =>  res.json())
 //   .then(data => { 
@@ -19,11 +19,13 @@ import React, {Component} from 'react'
   constructor(){
     super()
     this.state = {
-      weather: []
+      weather: [],
+      altWeather: '',
+      extraWeather: []
     }
   }
     componentDidMount(){
-      fetch(url)
+      fetch(url + `KMMU`)
           .then(res =>  res.json())
           .then(data => { 
             
@@ -37,6 +39,25 @@ import React, {Component} from 'react'
       })
   
     }
+    handleChange = event => this.setState({altWeather: event.target.value})
+    handleSubmit = event => {
+      event.preventDefault()
+      fetch(url + this.state.altWeather)
+      .then(res => res.json())
+      .then(data => {
+        
+        if (Object.keys(data).length > 1){
+            let extraWeather = 
+            <div>
+                 {data["Raw-Report"]}
+                 <h4>last fetched </h4>
+                 {data.Meta.Timestamp}
+                 </div>
+               this.setState({extraWeather: extraWeather})
+        }
+      
+      })
+    }
   
   render(){
     return(
@@ -44,7 +65,14 @@ import React, {Component} from 'react'
         {console.log(this.state.weather)}
         <h3> Current Weather at MMU </h3>
         {this.state.weather}
-      
+        {/* {this.state.altWeather} */}
+        <label>Input Aiport Code for Weather </label>
+        <form onSubmit={(event)=> this.handleSubmit(event)}>
+        <input type="text" onChange={(event)=> this.handleChange(event)}  />
+        <button type="submit">Get Wx </button>
+        {this.state.extraWeather}
+        </form>
+
       </div>
     )
   }
