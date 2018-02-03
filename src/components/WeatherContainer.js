@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {WeatherShow} from './components/WeatherShow'
+import WeatherShow from './WeatherShow'
 
 
   const url = 'https://avwx.rest/api/metar/'
@@ -17,15 +17,10 @@ import {WeatherShow} from './components/WeatherShow'
     componentDidMount(){
       fetch(url + `KMMU`)
           .then(res =>  res.json())
-          .then(data => { 
-            
-           let weather = 
-           <div>
-             {data["Raw-Report"]}
-             <h4>last fetched </h4>
-             {data.Meta.Timestamp}
-             </div>
+          .then(data => {
+            let weather = data["Raw-Report"]
            this.setState({weather: weather})
+          
       })
   
     }
@@ -35,23 +30,21 @@ import {WeatherShow} from './components/WeatherShow'
       fetch(url + this.state.altWeather)
       .then(res => res.json())
       .then(data => {
-        
-        // if (Object.keys(data).length > 1){
-        //     let extraWeather = 
-        //     <div>
-        //          {data["Raw-Report"]}
-        //          <h4>last fetched </h4>
-        //          {data.Meta.Timestamp}
-        //          </div>
-        //        this.setState({extraWeather: extraWeather})
-        // }
-      
+        if (Object.keys(data).length > 1){
+            let extraWeather = [data["Raw-Report"], data.Meta.Timestamp]
+            // <div>
+            //      {data["Raw-Report"]}
+            //      <h4>last fetched </h4>
+            //      {data.Meta.Timestamp}
+            //      </div>
+               this.setState({extraWeather: extraWeather})
+        }
       })
     }
     render() {
       return (
         <div>
-        <WeatherShow weather={this.state.weather} extraWeather={this.state.extraWeather}/>
+        <WeatherShow weather={this.state.weather} extraWeather={this.state.extraWeather} handleSubmit={this.handleSubmit} handleChange={this.handleChange}/>
         </div>
       )
     }
