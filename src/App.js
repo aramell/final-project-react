@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import CreateFlight from  './componets/CreateFlight'
+import CreateFlight from  './components/CreateFlight'
+// import Flight from './components/Flight'
 import './App.css';
 
 class App extends Component {
@@ -11,7 +12,7 @@ class App extends Component {
     return (
       <div className="App">
 
-      <CreateFlight flight={this.flight} />
+      <CreateFlight  />
 
       </div>
     );

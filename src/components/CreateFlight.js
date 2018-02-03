@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Flight from './Flight'
+
 
 class CreateFlight extends React.Component{
   constructor(props){
@@ -25,7 +27,7 @@ class CreateFlight extends React.Component{
 
   handleSubmit = event => {
     event.preventDefault()
-    
+    debugger
   }
   render(){
 
