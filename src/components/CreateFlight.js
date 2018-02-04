@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Flight from './Flight'
+import FlightReducer from '../reducers/flightReducer'
+import connect from 'react-redux'
 
 
 class CreateFlight extends React.Component{
@@ -7,10 +9,10 @@ class CreateFlight extends React.Component{
     super(props)
 
     this.state = {
-      flights: [],
-          // flightTime: '',
-          // date: '',
-          // planeNumber: '',
+      
+          flightTime: '',
+          date: '',
+          planeNumber: '',
 
     }
     
@@ -19,15 +21,16 @@ class CreateFlight extends React.Component{
     
     const value = event.target.value
     const name = event.target.name
-
+    
     this.setState({
-      [name]: value
+        [name]: value
+    
     })
   }
 
   handleSubmit = event => {
     event.preventDefault()
-    debugger
+    this.props.store.dispatch({ type: 'ADD_FLIGHT', flight: this.state})
   }
   render(){
 
@@ -43,6 +46,7 @@ class CreateFlight extends React.Component{
        <ul>  <input type="textarea" name="planeNumber" onChange={this.handleChange}/> </ul>
          <button type="submit"> Submit </button>
       </form>
+      {this.state.text}
       <Flight flights={this.state.flights} />
       </div>
     )

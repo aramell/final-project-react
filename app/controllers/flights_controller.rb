@@ -1,8 +1,9 @@
 class FlightsController < ApplicationController
   def index 
-    @flight = Flight.all
+    @flights = Flight.all
     respond_to do |f|
       f.json {render json: @flights}
+      # f.html
     end
   end
 
@@ -13,6 +14,7 @@ class FlightsController < ApplicationController
     @flight = Flight.create(flight_params)
     respond_to do |f|
       f.json {render :json => @flight}
+    end
   end
   def edit
     @flight = Flight.Find(:id)

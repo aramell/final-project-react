@@ -1,5 +1,6 @@
 import React from 'react'
 import Flight from './Flight'
+import fetchFlights from '../actions/fetchFlights';
 
 class FlightContainer extends React.Component {
   constructor(){
@@ -10,6 +11,10 @@ class FlightContainer extends React.Component {
       flightTime: '',
       planeNumber: ''
     }
+    
+  }
+  componentDidMount(){
+    fetchFlights()
   }
   handleChange = event =>{
 

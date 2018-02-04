@@ -13,11 +13,18 @@
 ActiveRecord::Schema.define(version: 20180204143702) do
 
   create_table "flights", force: :cascade do |t|
+    t.integer "hours"
+    t.date "date"
+    t.integer "plane_id"
+    t.string "pilot"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "planes", force: :cascade do |t|
+    t.string "planenumber"
+    t.integer "flight_ids"
+    t.string "squawks"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
