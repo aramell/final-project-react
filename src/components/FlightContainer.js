@@ -6,8 +6,13 @@ class FlightContainer extends React.Component {
     super()
 
     this.state = {
-      
+      date: '',
+      flightTime: '',
+      planeNumber: ''
     }
+  }
+  handleChange = event =>{
+
   }
   render (){
     return (
