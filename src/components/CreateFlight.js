@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Flight from './Flight'
 import FlightReducer from '../reducers/flightReducer'
-import connect from 'react-redux'
+import {connect} from 'react-redux'
 
 
 class CreateFlight extends React.Component{
@@ -9,11 +9,9 @@ class CreateFlight extends React.Component{
     super(props)
 
     this.state = {
-      
           flightTime: '',
           date: '',
-          planeNumber: '',
-
+          planeNumber: ''
     }
     
   }
@@ -30,7 +28,8 @@ class CreateFlight extends React.Component{
 
   handleSubmit = event => {
     event.preventDefault()
-    this.props.store.dispatch({ type: 'ADD_FLIGHT', flight: this.state})
+    
+    this.props.dispatch({ type: 'ADD_FLIGHT', flight: this.state})
   }
   render(){
 
@@ -46,12 +45,14 @@ class CreateFlight extends React.Component{
        <ul>  <input type="textarea" name="planeNumber" onChange={this.handleChange}/> </ul>
          <button type="submit"> Submit </button>
       </form>
-      {this.state.text}
       <Flight flights={this.state.flights} />
       </div>
     )
   }
 
 }
+const mapStateToProps = state =>{
+  return {flights: state.flights}
+}
 
-export default CreateFlight
+export default connect(mapStateToProps)(CreateFlight)

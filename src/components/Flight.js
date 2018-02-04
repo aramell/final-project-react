@@ -1,5 +1,6 @@
 import React, {component} from 'react'
 import FlightContainer from './FlightContainer'
+import CreateFlight from './CreateFlight';
 
  
 const Flight = ({date, time, planeNumber, flightTime}) => {

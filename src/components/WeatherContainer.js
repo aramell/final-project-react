@@ -9,6 +9,7 @@ import WeatherShow from './WeatherShow'
   constructor(){
     super()
     this.state = {
+      fetchingData: true,
       weather: [],
       altWeather: '',
       extraWeather: []

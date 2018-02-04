@@ -6,11 +6,11 @@ class FlightContainer extends React.Component {
   constructor(){
     super()
 
-    this.state = {
-      date: '',
-      flightTime: '',
-      planeNumber: ''
-    }
+    // this.state = {
+    //   date: '',
+    //   flightTime: '',
+    //   planeNumber: ''
+    // }
     
   }
   componentDidMount(){

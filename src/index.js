@@ -8,8 +8,10 @@ import thunk from 'redux-thunk'
 import flightReducer from './reducers/flightReducer'
 import registerServiceWorker from './registerServiceWorker';
 import { applyMiddleware } from 'redux';
+import rootReducer from './reducers/index';
+import store from './store/store';
 
-const store = createStore(flightReducer, applyMiddleware(thunk))
+// const store = createStore(rootReducer, applyMiddleware(thunk))
 
 ReactDOM.render(
 <Provider store={store}>

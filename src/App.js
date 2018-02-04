@@ -4,18 +4,17 @@ import CreateFlight from  './components/CreateFlight'
 import WeatherContainer from './components/WeatherContainer'
 import WeatherShow from'./components/WeatherShow'
 import {connect} from 'react-redux'
+import NavBar from './components/NavBar'
 import './App.css';
 import FlightContainer from './components/FlightContainer';
 
 class App extends Component {
   render() {
-    const Flight = {
-
-    }
+  debugger
     return (
       <div className="App">
-
-      <CreateFlight />
+      {/* <NavBar /> */}
+      <CreateFlight/>
       <WeatherContainer />
       <FlightContainer />
 
@@ -23,8 +22,8 @@ class App extends Component {
     );
   }
 }
-const mapStateToProps = state =>{
-  return{ flights: state.flights}
-}
+// const mapStateToProps = state =>{
+//   return{ flights: state.flights}
+// }
 
-export default connect(mapStateToProps)(App)
+export default App
