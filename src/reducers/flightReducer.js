@@ -5,7 +5,11 @@ export default function flightReducer(state = {
   switch(action.type){
     case 'ADD_FLIGHT':
     debugger
-      return state.flights.concat(state.flights) // fix the add flight
+      return [...state,{
+        flightTime: action.flightTime,
+        date: action.date
+
+      }]// added action.payload instead of flights
     default:
     return state
     }

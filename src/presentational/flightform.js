@@ -1,5 +1,6 @@
 
-const FlightForm = () =>{
+import { React } from 'react';
+export const FlightForm = () =>{
  <div className="flight">
  <h1> Create Flight </h1>
  <form className="createFlight" onSubmit={(event) => this.handleSubmit(event)}>

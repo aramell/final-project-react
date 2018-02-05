@@ -1,8 +1,11 @@
-import {createStore, compose} from 'redux'
+import {createStore, applyMiddleware} from 'redux'
+import thunk from 'redux-thunk'
 import React from 'react'
 import ReactDom from 'react-dom'
 // import {syncHistoryWithStore} from 'react-router-redux'
 import rootReducer from '../reducers/index'
+
+const middlewares = [thunk]
 
 // const defaultState = {
 //   flights,

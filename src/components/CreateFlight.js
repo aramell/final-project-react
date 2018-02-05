@@ -1,35 +1,40 @@
 import React, { Component } from 'react';
 import Flight from './Flight'
-import FlightReducer from '../reducers/flightReducer'
 import {connect} from 'react-redux'
+import addFlight from '../actions/addFlight';
+import { bindActionCreators } from 'redux';
+// import rootReducer from '../reducers/index';
+import FlightContainer from './FlightContainer';
 
 
-class CreateFlight extends React.Component{
-  constructor(props){
-    super(props)
-
-    this.state = {
-          flightTime: '',
-          date: '',
-          planeNumber: ''
-    }
+class CreateFlight extends Component{
+  // constructor(props){
+  //   super(props)
     
-  }
+  //   this.state = {
+  //         flightTime: '',
+  //         date: '',
+  //         planeNumber: ''
+  //   }
+    
+  // }
   handleChange = event =>{
     
     const value = event.target.value
     const name = event.target.name
-    
     this.setState({
         [name]: value
-    
     })
+    
   }
 
   handleSubmit = event => {
     event.preventDefault()
-    
-    this.props.dispatch({ type: 'ADD_FLIGHT', flight: this.state})
+    const date = this.props.date
+    const flightTime = this.props.flightTime
+    const planeNumber = this.props.planeNumber
+    debugger 
+    this.props.addFlight(date, flightTime, planeNumber)
   }
   render(){
 
@@ -45,14 +50,30 @@ class CreateFlight extends React.Component{
        <ul>  <input type="textarea" name="planeNumber" onChange={this.handleChange}/> </ul>
          <button type="submit"> Submit </button>
       </form>
-      <Flight flights={this.state.flights} />
+      {/* <Flight flights={this.state.flights} /> */}
       </div>
     )
   }
 
 }
-const mapStateToProps = state =>{
-  return {flights: state.flights}
+function mapStateToProps(state) {
+  debugger
+  return {
+    date: state.date,
+    flightTime: state.flightTime,
+    planeNumber: state.planeNumber
+     
+  }
+    // flightTime: state.flightTime,
+    // date: state.date,
+    // planeNumber: state.planeNumber}
 }
+function mapDispatchToProps(dispatch){ 
+  return bindActionCreators({
+    addFlight: addFlight
+  }, dispatch)
+} 
+export default connect(mapStateToProps, mapDispatchToProps)(CreateFlight)
 
-export default connect(mapStateToProps)(CreateFlight)
+// export default CreateFlight
+
