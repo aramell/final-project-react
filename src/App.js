@@ -13,6 +13,7 @@ import FlightContainer from './components/FlightContainer';
 import { bindActionCreators } from 'redux';
 import addFlight from './actions/addFlight';
 import flightGetter from './actions/flightGetter';
+import configureStore from './store/configureStore';
 
 class App extends Component {
   constructor(props){

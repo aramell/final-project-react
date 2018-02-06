@@ -10,11 +10,10 @@ import flightReducer from './reducers/flightReducer'
 import registerServiceWorker from './registerServiceWorker';
 import { applyMiddleware } from 'redux';
 import rootReducer from './reducers/index';
-import store from './store/store'; 
+import configureStore from './store/configureStore'; 
 // import { ConnectedCreateFlight } from './components/CreateFlight';
+const store = configureStore()
 
-// const store = createStore(rootReducer, applyMiddleware(thunk))
-// const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
 ReactDOM.render(
     <Provider store={store}>
