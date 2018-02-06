@@ -3,7 +3,7 @@ import initialState from './initialState'
 export default function flightReducer(state = initialState.flights, action) {
   console.log(action)
   switch(action.type){
-    case types.LOAD_CATS_SUCCESS:
+    case types.LOAD_FLIGHTS_SUCCESS:
     return action.flights
     ///////////////////////////
     // debugger

@@ -11,6 +11,7 @@ import registerServiceWorker from './registerServiceWorker';
 import { applyMiddleware } from 'redux';
 import rootReducer from './reducers/index';
 import configureStore from './store/configureStore'; 
+import { loadFlights } from './actions/flightActions';
 // import { ConnectedCreateFlight } from './components/CreateFlight';
 const store = configureStore()
 

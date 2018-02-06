@@ -12,11 +12,12 @@ import * as types from './actionTypes'
 
 export function loadFlights(){
   return function (dispatch){
-    return flightGetter.loadFlights().then(flights => {
-      dispatch(loadFlightsSucccess(flights))
+    
+    return flightGetter.loadAllFlights().then(flights => {
+      dispatch(loadFlightsSuccess(flights))
     }).catch(error => { throw(error)})
   }
 }
 export function loadFlightsSuccess(flights){
-  return{type: types.LOAD_CATS_SUCCESS, flights}
+  return{type: types.LOAD_FLIGHTS_SUCCESS, flights}
 }

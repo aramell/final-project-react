@@ -14,17 +14,20 @@ import { bindActionCreators } from 'redux';
 // import addFlight from './actions/addFlight';
 import flightGetter from './actions/flightGetter';
 import configureStore from './store/configureStore';
+import { loadFlights } from './actions/flightActions';
 
 class App extends Component {
   constructor(props){
     super(props)
-    this.state ={
-      flights: []
-    }
+ 
   }
 
     componentDidMount(){
-      flightGetter.fetchFlights().then(flights => this.setState({flights}))
+      
+      this.props.store.dispatch(loadFlights())
+          // store.dispatch(loadFlights())
+
+      // flightGetter.fetchFlights().then(flights => this.setState({flights}))
       
     }
     addFlight = flight =>{
@@ -43,7 +46,7 @@ class App extends Component {
       <div className="weather-container">
       <WeatherContainer />
       </div>
-      <FlightContainer flights ={this.state.flight} />
+      <FlightContainer />
 
       </div>
     );
