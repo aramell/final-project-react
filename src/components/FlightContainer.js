@@ -30,11 +30,12 @@ class FlightContainer extends React.Component {
   handleChange = event =>{
 
   }
+
   render (){
-    
+    // debugger
     return (
       <div>
-        <Flight />
+        <Flight flights={this.props.flights.flights}/>
       </div>
     )
   }

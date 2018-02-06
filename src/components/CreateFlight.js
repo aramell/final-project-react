@@ -30,12 +30,17 @@ class CreateFlight extends Component{
 
   handleSubmit = event => {
     event.preventDefault()
-    // const date = this.props.date
-    // const flightTime = this.props.flightTime
-    // const planeNumber = this.props.planeNumber
-    debugger 
-    this.props.addFlight(this.state)
-  }
+   
+    // debugger 
+    // this.props.addFlight(this.state)
+    debugger
+    this.props.flight(this.state)
+  //   this.setState({
+  //             flightTime: '',
+  //             date: '',
+  //             planeNumber: ''
+  // })
+}
   render(){
 
     return( 
@@ -43,11 +48,11 @@ class CreateFlight extends Component{
       <h1> Create Flight </h1>
       <form className="createFlight" onSubmit={(event) => this.handleSubmit(event)}>
       <label>Date </label>
-      <ul><input type="text" name="date" onChange={this.handleChange}/> </ul>
+      <ul><input type="text" name="date" onChange={this.handleChange} placeholder="date"/> </ul>
       <label>Flight Time </label>
-      <ul><input type="textarea" name="flightTime"  onChange={this.handleChange} /> </ul>
+      <ul><input type="textarea" name="flightTime"  onChange={this.handleChange} placeholder="flighttime"/> </ul>
          <label>Plane number </label>
-       <ul>  <input type="textarea" name="planeNumber" onChange={this.handleChange}/> </ul>
+       <ul>  <input type="textarea" name="planeNumber" onChange={this.handleChange} placeholder="plane"/> </ul>
          <button type="submit"> Submit </button>
       </form>
       {/* <Flight flights={this.state.flights} /> */}

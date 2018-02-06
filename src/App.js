@@ -24,14 +24,19 @@ class App extends Component {
       flightGetter.fetchFlights().then(flights => this.setState({flights}))
       
     }
+    addFlight = flight =>{
+      debugger
+      flightGetter.createFlights(flight).then(flight => this.setState({flight: this.state.flights.concat(flight)}))
+      
+    }
   render() {
-  
+    // debugger
     return (
       <div className="App">
       {/* <NavBar /> */}
-      <CreateFlight/>
+      <CreateFlight flight={this.addFlight}/>
       <WeatherContainer />
-      <FlightContainer />
+      <FlightContainer flights ={this.state} />
 
       </div>
     );

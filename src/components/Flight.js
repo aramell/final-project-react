@@ -5,19 +5,18 @@ import FlightContainer from './FlightContainer'
 
  
 const Flight = ({flights}) => {
-  // debugger
+  
+  // if (flights === []){
+  //   const loading = "loading"
+  // //  } 
+  //    const renderFlights = flights.map(flight=>
+  //    <p key={flight.id}>{flight.date} </p>)
   return(
     <div>
       <h2> Future Flights </h2>
-      {/* {flights.map((flight) => {
-        flight.date
-        flight.flightTime
-        flight.planeNumber
-      })} */}
-      {/* <p> {date} </p>
-       <p> {time} </p>
-       <p> {planeNumber}</p>
-       <p>{flightTime}</p> */}
+      {/* {renderFlights} */}
+      {}
+      
     </div>
   )
 

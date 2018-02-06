@@ -6,8 +6,18 @@ const flightGetter =  {
   return fetch(`${url}/flights`)
   
       .then(response => response.json())
-      .then(res => console.log(res))
-      // console.log(data)
+    },
+
+    createFlights(flight){
+      return fetch(`${url}/flights`, {
+        method: 'POST',
+        body: JSON.stringify({flight: flight}),
+        headers: {
+          'Content-Type': 'application/json'
+        },
+         accepts: 'application/json'
+      })
+      .then(response => response.json())
     }
 }
 export default flightGetter

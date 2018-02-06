@@ -11,10 +11,15 @@ class Api::FlightsController < ApplicationController
     @flight = Flight.new
   end
   def create
+    binding.pry
     @flight = Flight.create(flight_params)
+    if @flight.save
     respond_to do |f|
       f.json {render :json => @flight}
-    end
+     end
+      else
+      render json: {errors:{message: "this failed"}}
+      end
   end
   def edit
     @flight = Flight.Find(:id)
@@ -33,7 +38,7 @@ class Api::FlightsController < ApplicationController
 
   private
   def flight_params
-    params.require(:flight).permit(:time, :flighthours, :planenumber)
+    params.require(:flight).permit(:time, :date, :flightTime, :planeNumber, :squawks)
   end
   def set_flight
     @flight = Flight.bind_by(:id => params[:id])
