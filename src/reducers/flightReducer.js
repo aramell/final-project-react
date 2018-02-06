@@ -1,7 +1,6 @@
 import * as types from '../actions/actionTypes'
-export default function flightReducer(state = {
-  flights: []
-}, action) {
+import initialState from './initialState'
+export default function flightReducer(state = initialState.flights, action) {
   console.log(action)
   switch(action.type){
     case types.LOAD_CATS_SUCCESS:
