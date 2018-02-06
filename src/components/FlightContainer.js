@@ -34,7 +34,7 @@ class FlightContainer extends React.Component {
     
     return (
       <div>
-        <Flight flights={this.props.flights.flights} />
+        <Flight />
       </div>
     )
   }

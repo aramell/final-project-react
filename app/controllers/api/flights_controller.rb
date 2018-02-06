@@ -2,7 +2,7 @@ class Api::FlightsController < ApplicationController
   def index 
     @flights = Flight.all
     respond_to do |f|
-      f.json {render :json => @flight}
+      f.json {render :json => @flights}
       # f.html
     end
   end

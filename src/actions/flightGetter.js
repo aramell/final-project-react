@@ -6,7 +6,8 @@ const flightGetter =  {
   return fetch(`${url}/flights`)
   
       .then(response => response.json())
-    debugger
+      .then(res => console.log(res))
+      // console.log(data)
     }
 }
 export default flightGetter

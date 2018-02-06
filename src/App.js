@@ -13,9 +13,16 @@ import addFlight from './actions/addFlight';
 import flightGetter from './actions/flightGetter';
 
 class App extends Component {
+  constructor(props){
+    super(props)
+    this.state ={
+      flights: []
+    }
+  }
 
     componentDidMount(){
-      flightGetter.fetchFlights()
+      flightGetter.fetchFlights().then(flights => this.setState({flights}))
+      
     }
   render() {
   
@@ -24,7 +31,7 @@ class App extends Component {
       {/* <NavBar /> */}
       <CreateFlight/>
       <WeatherContainer />
-      <FlightContainer flights={this.props.flights}/>
+      <FlightContainer />
 
       </div>
     );
