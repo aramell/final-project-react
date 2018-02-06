@@ -6,6 +6,8 @@ import WeatherContainer from './components/WeatherContainer'
 import WeatherShow from'./components/WeatherShow'
 import {connect} from 'react-redux'
 import NavBar from './components/NavBar'
+import { Router, browserHistory } from 'react-router';  
+
 import './App.css';
 import FlightContainer from './components/FlightContainer';
 import { bindActionCreators } from 'redux';
@@ -25,23 +27,28 @@ class App extends Component {
       
     }
     addFlight = flight =>{
-      debugger
+      
       flightGetter.createFlights(flight).then(flight => this.setState({flight: this.state.flights.concat(flight)}))
       
     }
   render() {
-    // debugger
+    
     return (
       <div className="App">
       {/* <NavBar /> */}
+      <div className="create-flight">
       <CreateFlight flight={this.addFlight}/>
+      </div>
+      <div className="weather-container">
       <WeatherContainer />
-      <FlightContainer flights ={this.state} />
+      </div>
+      <FlightContainer flights ={this.state.flight} />
 
       </div>
     );
   }
 }
+
 const mapStateToProps = state =>{
   return{ flights: state.flights}
 }

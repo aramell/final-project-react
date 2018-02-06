@@ -4,7 +4,7 @@ export default function flightReducer(state = {
   console.log(action)
   switch(action.type){
     case 'ADD_FLIGHT':
-    debugger
+    // debugger
        return {
          ...state,
          flights: [state.flights, action.flight]

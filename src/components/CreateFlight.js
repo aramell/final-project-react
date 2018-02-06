@@ -8,16 +8,16 @@ import FlightContainer from './FlightContainer';
 
 
 class CreateFlight extends Component{
-  // constructor(props){
-  //   super(props)
+  constructor(props){
+    super(props)
     
-  //   this.state = {
-  //         flightTime: '',
-  //         date: '',
-  //         planeNumber: ''
-  //   }
+    this.state = {
+          flightTime: '',
+          date: '',
+          planeNumber: ''
+    }
     
-  // }
+  }
   handleChange = event =>{
     
     const value = event.target.value
@@ -31,15 +31,14 @@ class CreateFlight extends Component{
   handleSubmit = event => {
     event.preventDefault()
    
-    // debugger 
     // this.props.addFlight(this.state)
-    debugger
+    
     this.props.flight(this.state)
-  //   this.setState({
-  //             flightTime: '',
-  //             date: '',
-  //             planeNumber: ''
-  // })
+    this.setState({
+              flightTime: '',
+              date: '',
+              planeNumber: ''
+  })
 }
   render(){
 
@@ -56,7 +55,7 @@ class CreateFlight extends Component{
          <button type="submit"> Submit </button>
       </form>
       {/* <Flight flights={this.state.flights} /> */}
-      <Flight flights={this.props.flights}/>
+      {/* <Flight flights={this.props.flights}/> */}
       </div>
     )
   }

@@ -11,7 +11,7 @@ class Api::FlightsController < ApplicationController
     @flight = Flight.new
   end
   def create
-    binding.pry
+    
     @flight = Flight.create(flight_params)
     if @flight.save
     respond_to do |f|
