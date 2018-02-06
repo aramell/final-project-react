@@ -1,5 +1,6 @@
 
 import flightGetter from './flightGetter';
+import * as types from './actionTypes'
 
 // export default function addFlight(flight){
 //   return{
@@ -15,4 +16,7 @@ export function loadFlights(){
       dispatch(loadFlightsSucccess(flights))
     }).catch(error => { throw(error)})
   }
+}
+export function loadFlightsSuccess(flights){
+  return{type: types.LOAD_CATS_SUCCESS, flights}
 }
