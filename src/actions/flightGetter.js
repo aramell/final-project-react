@@ -18,6 +18,13 @@ const flightGetter =  {
          accepts: 'application/json'
       })
       .then(response => response.json())
+    },
+
+    loadFlights(){
+      return function(dispatch){
+        return fetch(`${url}/flights`).then(response =>{return response.json()
+        }).catch(error=> { return error})
+      }
     }
 }
 export default flightGetter

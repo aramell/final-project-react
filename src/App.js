@@ -11,7 +11,7 @@ import { Router, browserHistory } from 'react-router';
 import './App.css';
 import FlightContainer from './components/FlightContainer';
 import { bindActionCreators } from 'redux';
-import addFlight from './actions/addFlight';
+// import addFlight from './actions/addFlight';
 import flightGetter from './actions/flightGetter';
 import configureStore from './store/configureStore';
 

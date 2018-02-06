@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Flight from './Flight'
 import {connect} from 'react-redux'
-import addFlight from '../actions/addFlight';
+// import addFlight from '../actions/addFlight';
 import { bindActionCreators } from 'redux';
 // import rootReducer from '../reducers/index';
 import FlightContainer from './FlightContainer';
@@ -73,7 +73,7 @@ function mapStateToProps(state) {
 }
 function mapDispatchToProps(dispatch){ 
   return bindActionCreators({
-    addFlight: addFlight
+    // addFlight: addFlight
   }, dispatch)
 } 
 export default connect(mapStateToProps, mapDispatchToProps)(CreateFlight)
