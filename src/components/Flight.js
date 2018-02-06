@@ -5,18 +5,15 @@ import React, {component} from 'react'
 
  
 const Flight = ({flights}) => {
+
   
-  // if (flights === []){
-  //   const loading = "loading"
-  // // //  } 
-    //  const renderFlights = flights.map(flight=>
-    //  <p key={flight.id}>{flight.date} </p>)
+  const renderFlights =  flights.map((flight) => <div><ul> {flight.id} </ul> </div>)
      
   return(
     <div>
       <h2> Future Flights </h2>
-      {/* {renderFlights} */}
-      {}
+      {flights ? renderFlights : "none"}
+      {/* // <p>{flights > 0 renderFlights : "no flights yet"} </p> */}
       
     </div>
   )

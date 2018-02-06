@@ -46,7 +46,7 @@ class App extends Component {
       <div className="weather-container">
       <WeatherContainer />
       </div>
-      <FlightContainer />
+      <FlightContainer flights={this.props.flights}/>
 
       </div>
     );
