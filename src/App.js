@@ -10,9 +10,13 @@ import './App.css';
 import FlightContainer from './components/FlightContainer';
 import { bindActionCreators } from 'redux';
 import addFlight from './actions/addFlight';
+import flightGetter from './actions/flightGetter';
 
 class App extends Component {
 
+    componentDidMount(){
+      flightGetter.fetchFlights()
+    }
   render() {
   
     return (
@@ -20,20 +24,19 @@ class App extends Component {
       {/* <NavBar /> */}
       <CreateFlight/>
       <WeatherContainer />
-      <FlightContainer />
+      <FlightContainer flights={this.props.flights}/>
 
       </div>
     );
   }
 }
-// const mapStateToProps = state =>{
-//   return{ flights: state.flights}
-// }
+const mapStateToProps = state =>{
+  return{ flights: state.flights}
+}
 // const mapDispatchToProps = dispatch =>{
-//   return bindActionCreators( addFlight,
+//   return bindActionCreators( addFlight),
 //     dispatch
-//   )
 // }
 
-// const App =  connect(mapStateToProps, mapDispatchToProps)(App)
-export default App
+export default connect(mapStateToProps)(App)
+// export default App

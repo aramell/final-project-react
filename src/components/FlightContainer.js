@@ -1,11 +1,13 @@
 import React from 'react'
 import Flight from './Flight'
-import fetchFlights from '../actions/fetchFlights';
+// import fetchFlights from '../actions/fetchFlights';
+// import { thunk } from 'redux-thunk';
+import CreateFlight from './CreateFlight'
 
 class FlightContainer extends React.Component {
   constructor(){
     super()
-
+    
     // this.state = {
     //   date: '',
     //   flightTime: '',
@@ -15,24 +17,32 @@ class FlightContainer extends React.Component {
   }
   componentDidMount(){
     // const url = "http://localhost:3000/flights"
-  
-    // dispatch({ type: 'START_ADDING_FLIGHTS_REQUEST' });
-    //   return fetch(url)
-  
+    // // debugger
+    // // dispatch({ type: 'START_ADDING_FLIGHTS_REQUEST' });
+    //   return dispatch =>{
+    //     fetch(url)
     //   .then(response => response.json())
     //   .then(flights => dispatch({ type: 'ADD_FLIGHTS', flights }));
-  
-    }
+    // debugger
+    // }
+  }
   
   handleChange = event =>{
 
   }
   render (){
+    
     return (
       <div>
-        <Flight  />
+        <Flight flights={this.props.flights.flights} />
       </div>
     )
   }
+
 }
+// mapStateToProps = state =>{
+//   return{
+//     flights: state.flights
+//   }
+// }
 export default FlightContainer

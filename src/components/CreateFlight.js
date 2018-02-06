@@ -51,6 +51,7 @@ class CreateFlight extends Component{
          <button type="submit"> Submit </button>
       </form>
       {/* <Flight flights={this.state.flights} /> */}
+      <Flight flights={this.props.flights}/>
       </div>
     )
   }

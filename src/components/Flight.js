@@ -1,16 +1,23 @@
 import React, {component} from 'react'
 import FlightContainer from './FlightContainer'
-import CreateFlight from './CreateFlight';
+// import CreateFlight from './CreateFlight';
+ 
 
  
-const Flight = ({date, time, planeNumber, flightTime}) => {
+const Flight = ({flights}) => {
+  // debugger
   return(
     <div>
       <h2> Future Flights </h2>
-      <p> {date} </p>
+      {/* {flights.map((flight) => {
+        flight.date
+        flight.flightTime
+        flight.planeNumber
+      })} */}
+      {/* <p> {date} </p>
        <p> {time} </p>
        <p> {planeNumber}</p>
-       <p>{flightTime}</p>
+       <p>{flightTime}</p> */}
     </div>
   )
 
