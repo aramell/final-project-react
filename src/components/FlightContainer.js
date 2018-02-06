@@ -14,8 +14,16 @@ class FlightContainer extends React.Component {
     
   }
   componentDidMount(){
-    fetchFlights()
-  }
+    // const url = "http://localhost:3000/flights"
+  
+    // dispatch({ type: 'START_ADDING_FLIGHTS_REQUEST' });
+    //   return fetch(url)
+  
+    //   .then(response => response.json())
+    //   .then(flights => dispatch({ type: 'ADD_FLIGHTS', flights }));
+  
+    }
+  
   handleChange = event =>{
 
   }

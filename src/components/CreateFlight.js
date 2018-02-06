@@ -30,11 +30,11 @@ class CreateFlight extends Component{
 
   handleSubmit = event => {
     event.preventDefault()
-    const date = this.props.date
-    const flightTime = this.props.flightTime
-    const planeNumber = this.props.planeNumber
+    // const date = this.props.date
+    // const flightTime = this.props.flightTime
+    // const planeNumber = this.props.planeNumber
     debugger 
-    this.props.addFlight(date, flightTime, planeNumber)
+    this.props.addFlight(this.state)
   }
   render(){
 
@@ -57,11 +57,9 @@ class CreateFlight extends Component{
 
 }
 function mapStateToProps(state) {
-  debugger
+  
   return {
-    date: state.date,
-    flightTime: state.flightTime,
-    planeNumber: state.planeNumber
+    flights: state.flights
      
   }
     // flightTime: state.flightTime,

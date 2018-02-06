@@ -1,11 +1,9 @@
 
-export default function addFlight(date, flightTime, planeNumber){
+export default function addFlight(flight){
   debugger
   return{
     type: 'ADD_FLIGHT',
-    date,
-    flightTime,
-    planeNumber
+      flight
   }
 
 }
