@@ -11,7 +11,6 @@ class FlightIndex extends React.Component {
     super()
     
     
-<<<<<<< HEAD
   }
   componentDidMount(){
     this.props.loadFlights()
@@ -22,18 +21,6 @@ class FlightIndex extends React.Component {
 
   }
 
-=======
-  }
-  componentDidMount(){
-    this.props.loadFlights()
-
-  }
-  
-  handleChange = event =>{
-
-  }
-
->>>>>>> f6c5de03ee51eb1f7c69ef07b2a5242347eaee0b
   render (){
     
     return (

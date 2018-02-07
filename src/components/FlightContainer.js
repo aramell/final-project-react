@@ -31,7 +31,6 @@
 
 //   render (){
     
-<<<<<<< HEAD
 //     return (
 //       <div>
 //         <Flight flights={this.props.flights} match={this.props.match}/>
@@ -41,17 +40,6 @@
 //       </div>
 //     )
 //   }
-=======
-    return (
-      <div>
-        <Flight flights={this.props.flights} />
-        {/* <ShowFlight /> */}
-        {/* <Route path={`${this.props.match.url}/:flightId`} component={ShowFlight} />
-        <Route exact path={this.props.match.url} render={()=> (<h3> Please select a flight to view more.</h3>)}/> */}
-      </div>
-    )
-  }
->>>>>>> f6c5de03ee51eb1f7c69ef07b2a5242347eaee0b
 
 // }
 // function mapDispatchToProps(dispatch){

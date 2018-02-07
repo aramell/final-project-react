@@ -26,13 +26,8 @@ const App = (props) => {
       <switch>
         <NavBar />
         <Route exact path="/" component={HomePage} />
-<<<<<<< HEAD
         <Route  path="/flights" component={FlightIndex} />
         {/* <Route  path="/flights/:id" component={ShowFlight} /> */}
-=======
-        <Route  path="/flights" component={FlightContainer} />
-        <Route  path="/flights/:id" component={ShowFlight} />        
->>>>>>> f6c5de03ee51eb1f7c69ef07b2a5242347eaee0b
         <Route  path="/new" component={CreateFlight} />
         </switch>
       </div>

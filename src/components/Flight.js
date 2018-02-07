@@ -2,13 +2,7 @@ import React, {component} from 'react'
 import ShowFlight from './showFlight'
 
 import { BrowserRouter as Route, Router, Link } from 'react-router-dom';
-<<<<<<< HEAD
-import ShowFlight from './showFlight';
 import FlightIndex from './FlightIndex'
-=======
-// import ShowFlight from './showFlight';
-import FlightIndex from './FlightIndex';
->>>>>>> f6c5de03ee51eb1f7c69ef07b2a5242347eaee0b
 
  
 const Flight = ({match, flights}) => {
