@@ -9,7 +9,7 @@ export default function flightReducer(state = initialState.flights, action) {
     return action.flights
   switch (action.type){
     case types.ADD_FLIGHT_SUCCESS:
-    // debugger
+    
     return [
       
         ...state.filter(flight => flight.id !== action.flight.id ),

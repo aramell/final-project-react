@@ -14,7 +14,9 @@ class CreateFlight extends Component{
     this.state = {
           flightTime: '',
           date: '',
-          planeNumber: ''
+          planeNumber: '',
+          destination: '',
+          pilot: ''
     }
     
   }
@@ -34,11 +36,13 @@ class CreateFlight extends Component{
     // this.props.addFlight(this.state)
     
     this.props.addflight(this.state)
-  //   this.setState({
-  //             flightTime: '',
-  //             date: '',
-  //             planeNumber: ''
-  // })
+    this.setState({
+      flightTime: '',
+      date: '',
+      planeNumber: '',
+      destination: '',
+      pilot: ''
+  })
 }
   render(){
 
@@ -67,7 +71,7 @@ class CreateFlight extends Component{
 
 }
 function mapStateToProps(state) {
-  
+  debugger
   return {
     flights: state.flights
      
@@ -78,7 +82,7 @@ function mapStateToProps(state) {
 }
 function mapDispatchToProps(dispatch){ 
   return bindActionCreators({
-    addFlight: addFlight
+    addFlight
   }, dispatch)
 } 
 export default connect(mapStateToProps, mapDispatchToProps)(CreateFlight)

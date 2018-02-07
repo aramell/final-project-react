@@ -15,10 +15,6 @@ export function createFlightSuccess(flight){
       return {type: types.ADD_FLIGHT_SUCCESS, flight}
     }
   
-  
-
-
-
 export function loadFlights(){
   return function (dispatch){
     

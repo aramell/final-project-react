@@ -43,12 +43,12 @@ function mapDispatchToProps(dispatch){
    }, dispatch)
   }
 
-// mapStateToProps = state =>{
-//   return{
-//     flights: state.flights
-//   }
-// }
-export default connect(null, mapDispatchToProps)(FlightContainer)
+function mapStateToProps(state){
+  return{
+    flights: state.flights
+  }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(FlightContainer)
 
 // function mapDispatchToProps(dispatch){ 
 //   return bindActionCreators({

@@ -37,7 +37,7 @@ class App extends Component {
       <div className="App">
       {/* <NavBar /> */}
         <div className="flight-index">
-            <FlightContainer flights={this.props.flights}/>
+            <FlightContainer />
         </div>
          <div className="create-flight">
           <CreateFlight addflight={this.addFlight}/>
