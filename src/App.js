@@ -6,7 +6,7 @@ import WeatherContainer from './components/WeatherContainer'
 import WeatherShow from'./components/WeatherShow'
 import {connect} from 'react-redux'
 import NavBar from './components/NavBar'
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom'
 import './App.css';
 import FlightContainer from './components/FlightContainer';
 import { bindActionCreators } from 'redux';
@@ -23,13 +23,12 @@ const App = (props) => {
   return (
     <Router>
       <div className="app">
-      <switch>
         <NavBar />
         <Route exact path="/" component={HomePage} />
         <Route  path="/flights" component={FlightIndex} />
-        {/* <Route  path="/flights/:id" component={ShowFlight} /> */}
+        <Route  path="/flights/:id" component={ShowFlight} />
         <Route  path="/new" component={CreateFlight} />
-        </switch>
+      
       </div>
     </Router>
   );

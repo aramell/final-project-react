@@ -11,10 +11,12 @@ import { BrowserRouter as Route} from 'react-router-dom';
 import FlightList from './FlightList';
 
 
-const FlightPage = ({flights}) =>
-  
+const FlightPage = ({match, flights}) =>
+
   <div>
-    <FlightList  flights={this.props.flights}/>
+    <FlightList flights={this.props.flights} />
+  <Route path={`${match.url}/:flightId`} component={ShowFlight}/>
+  <Route exact path={match.url} />
   </div>
 
   const mapStateToProps = state =>{
