@@ -3637,3 +3637,34 @@ Processing by Api::FlightsController#index as */*
 Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/api/flights" for 127.0.0.1 at 2018-02-07 09:12:30 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::FlightsController#index as */*
+  [1m[36mFlight Load (0.4ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Completed 200 OK in 34ms (Views: 28.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/flights" for 127.0.0.1 at 2018-02-07 09:20:59 -0500
+Processing by Api::FlightsController#index as */*
+  [1m[36mFlight Load (0.7ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Completed 200 OK in 23ms (Views: 20.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/flights" for 127.0.0.1 at 2018-02-07 09:21:20 -0500
+Processing by Api::FlightsController#index as */*
+  [1m[36mFlight Load (0.6ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/flights" for 127.0.0.1 at 2018-02-07 09:22:13 -0500
+Processing by Api::FlightsController#index as */*
+  [1m[36mFlight Load (0.4ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/flights" for 127.0.0.1 at 2018-02-07 09:22:19 -0500
+Processing by Api::FlightsController#index as */*
+  [1m[36mFlight Load (1.1ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Completed 200 OK in 30ms (Views: 27.5ms | ActiveRecord: 1.1ms)
+
+
