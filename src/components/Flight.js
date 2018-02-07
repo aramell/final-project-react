@@ -1,13 +1,14 @@
 import React, {component} from 'react'
 // import FlightContainer from './FlightContainer'
 // // import CreateFlight from './CreateFlight';
- 
+
+import { Link } from 'react-router-dom';
 
  
 const Flight = ({flights}) => {
 
   
-  const renderFlights =  flights.map((flight) => <div><ul key={flight.id}> Date: {flight.date} - Pilot: {flight.pilot} - Plane: {flight.planeNumber} </ul> </div>)
+  const renderFlights =  flights.map((flight) => <div><ul><Link key={flight.id} to={`/flights/${flight.id}`}> Date: {flight.date} - Pilot: {flight.pilot} - Plane: {flight.planeNumber} </Link></ul> </div>)
      
   return(
     <div>
