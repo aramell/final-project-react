@@ -1,6 +1,8 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import WeatherContainer from './WeatherContainer';
+import FlightContainer from './FlightContainer';
+import CreateFlight from './CreateFlight';
 
 class HomePage extends React.Component{
 
@@ -9,6 +11,8 @@ class HomePage extends React.Component{
       <div className="header">
           <h1>Flight Scheduler </h1>
           <WeatherContainer />
+          <FlightContainer />
+          <CreateFlight />
       </div>
     )
   }

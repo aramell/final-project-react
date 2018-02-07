@@ -26,60 +26,9 @@ const App = (props) => {
         <Route exact path="/" component={HomePage} />
         <Route  path="/flights" component={FlightContainer} />
         <Route  path="/new" component={CreateFlight} />
-
-        {/* <Route exact path="/actors" component={Actors} />
-        <Route exact path="/directors" component={Directors} />
-        <Route exact path="/movies" component={Movies} /> */}
       </div>
     </Router>
   );
 };
 
 export default App
-// class App extends Component {
-//   constructor(props){
-//     super(props)
- 
-//   }
-
-//     componentDidMount(){
-
-      
-//     }
-//     addFlight = flight =>{
-//       this.props.store.dispatch(addFlight(flight))
-//       // flightGetter.createFlights(flight).then(flight => this.setState({flight: this.state.flights.concat(flight)}))
-      
-//     }
-//   render() {
-    
-//     return (
-//       <div className="App">
-//         <div className="App-header">
-//         <h2> Flight Manager </h2>
-//         </div>
-//       {/* <NavBar /> */}
-//         <div className="flight-index">
-//             <FlightContainer />
-//         </div>
-//          <div className="create-flight">
-//           <CreateFlight addflight={this.addFlight}/>
-//          </div>
-//          <div className="weather-container">
-//           <WeatherContainer />
-//          </div>
-//       </div>
-//     );
-//   }
-// }
-
-// const mapStateToProps = state =>{
-//   return{ flights: state.flights}
-// }
-// // const mapDispatchToProps = dispatch =>{
-// //   return bindActionCreators( addFlight),
-// //     dispatch
-// // }
-
-// export default connect(mapStateToProps)(App)
-// export default App

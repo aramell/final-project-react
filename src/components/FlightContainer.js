@@ -34,8 +34,9 @@ class FlightContainer extends React.Component {
     return (
       <div>
         <Flight flights={this.props.flights} match={this.props.match}/>
-        <Route path={`${this.props.match.url}/:flightId`} component={ShowFlight} />
-        <Route exact path={this.props.match.url} render={()=> (<h3> Please select a flight to view more.</h3>)}/>
+        {/* <ShowFlight /> */}
+        {/* <Route path={`${this.props.match.url}/:flightId`} component={ShowFlight} />
+        <Route exact path={this.props.match.url} render={()=> (<h3> Please select a flight to view more.</h3>)}/> */}
       </div>
     )
   }
