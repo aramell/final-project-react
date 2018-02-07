@@ -11,7 +11,7 @@ const WeatherShow = props => (
     <input type="text" onChange={props.handleChange}  />
     <button type="submit">Get Wx </button> <br/>
 
-    {props.extraWeather}    
+       {props.extraWeather}    
 
     </form>
 
