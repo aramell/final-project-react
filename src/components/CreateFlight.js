@@ -52,15 +52,15 @@ class CreateFlight extends Component{
         <div className="form-group">
          <label>Date </label>
          {/* <ul>< DatePicker name="date"value={this.}  onChange={this.handleChange}/></ul> */}
-         <ul><input type="text" className="form-control" name="date" value={this.state.date} onChange={this.handleChange} placeholder="Date"/> </ul>
+         <ul><input type="text" className="form-control input-sm" name="date" value={this.state.date} onChange={this.handleChange} placeholder="Date"/> </ul>
             <label>Flight Time </label>
-         <ul><input type="textarea" className="form-control" name="flightTime" value={this.state.flightTime}   onChange={this.handleChange} placeholder="Expected flight time"/> </ul>
+         <ul><input type="text" className="form-control" name="flightTime" value={this.state.flightTime}   onChange={this.handleChange} placeholder="Expected flight time"/> </ul>
             <label>Plane number </label>
-          <ul>  <input type="textarea" className="form-control" name="planeNumber" value={this.state.planeNumber} onChange={this.handleChange} placeholder="which plane"/> </ul>
+          <ul>  <input type="text" className="form-control" name="planeNumber" value={this.state.planeNumber} onChange={this.handleChange} placeholder="which plane"/> </ul>
              <label>Destination </label>
-          <ul>  <input type="textarea"  className="form-control"name="destination" value={this.state.destination} onChange={this.handleChange} placeholder="Destination"/> </ul>
+          <ul>  <input type="text"  className="form-control"name="destination" value={this.state.destination} onChange={this.handleChange} placeholder="Destination"/> </ul>
             <label>Pilot</label>
-          <ul>  <input type="textarea" className="form-control" name="pilot" value={this.state.pilot} onChange={this.handleChange} placeholder="Pilot"/> </ul>
+          <ul>  <input type="text" className="form-control" name="pilot" value={this.state.pilot} onChange={this.handleChange} placeholder="Pilot"/> </ul>
         
           <button type="submit"className="btn"> Submit </button>
             </div>
