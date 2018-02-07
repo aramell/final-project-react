@@ -17,6 +17,7 @@ import { loadFlights, addFlight } from './actions/flightActions';
 import { BrowserRouter } from 'react-router-dom';
 import  HomePage  from './components/HomePage';
 import ShowFlight from './components/showFlight';
+import FlightIndex from './components/FlightIndex';
 
 const App = (props) => {
   return (
@@ -24,7 +25,8 @@ const App = (props) => {
       <div className="app">
         <NavBar />
         <Route exact path="/" component={HomePage} />
-        <Route  path="/flights" component={FlightContainer} />
+        <Route  path="/flights" component={FlightIndex} />
+        {/* <Route  path="/flights/:id" component={ShowFlight} /> */}
         <Route  path="/new" component={CreateFlight} />
       </div>
     </Router>

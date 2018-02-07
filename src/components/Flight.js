@@ -4,6 +4,7 @@ import React, {component} from 'react'
 
 import { BrowserRouter as Route, Router, Link } from 'react-router-dom';
 import ShowFlight from './showFlight';
+import FlightIndex from './FlightIndex'
 
  
 const Flight = ({match, flights}) => {
