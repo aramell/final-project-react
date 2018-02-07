@@ -1,6 +1,5 @@
 import * as types from '../actions/actionTypes'
 import initialState from './initialState'
-import cuid from 'cuid'
 
 export default function flightReducer(state = initialState.flights, action) {
   console.log(action)
@@ -10,10 +9,10 @@ export default function flightReducer(state = initialState.flights, action) {
   switch (action.type){
     case types.ADD_FLIGHT_SUCCESS:
     
-    return [
-      
-        ...state.filter(flight => flight.id !== action.flight.id ),
-        Object.assign({}, action.flight)]
+    // return  state.concat([action.flight])
+      return [action.flight, ...state]
+        // ...state.filter(flight => flight.id !== action.flight.id ),
+        // Object.assign({}, action.flight)]
     
     }
   

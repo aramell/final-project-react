@@ -35,6 +35,9 @@ class App extends Component {
     
     return (
       <div className="App">
+        <div className="App-header">
+        <h2> Flight Manager </h2>
+        </div>
       {/* <NavBar /> */}
         <div className="flight-index">
             <FlightContainer />

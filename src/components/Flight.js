@@ -7,7 +7,7 @@ import React, {component} from 'react'
 const Flight = ({flights}) => {
 
   
-  const renderFlights =  flights.map((flight) => <div><ul> {flight.id} - {flight.pilot} - {flight.planeNumber} </ul> </div>)
+  const renderFlights =  flights.map((flight) => <div><ul key={flight.id}> Date: {flight.date} - Pilot: {flight.pilot} - Plane: {flight.planeNumber} </ul> </div>)
      
   return(
     <div>

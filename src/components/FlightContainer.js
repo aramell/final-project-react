@@ -28,7 +28,7 @@ class FlightContainer extends React.Component {
   }
 
   render (){
-    // debugger
+    debugger
     return (
       <div>
         <Flight flights={this.props.flights}/>

@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 20180204143702) do
 
   create_table "flights", force: :cascade do |t|
     t.integer "time"
-    t.date "date"
+    t.datetime "date"
     t.string "planeNumber"
     t.integer "plane_id"
     t.string "squawks"

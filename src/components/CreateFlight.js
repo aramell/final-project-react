@@ -5,7 +5,8 @@ import {connect} from 'react-redux'
 import { bindActionCreators } from 'redux';
 // import rootReducer from '../reducers/index';
 import FlightContainer from './FlightContainer';
-import { addFlight } from '../actions/flightActions';
+import { addFlight, loadFlights } from '../actions/flightActions';
+import DatePicker from 'react-date-picker'
 
 class CreateFlight extends Component{
   constructor(props){
@@ -51,15 +52,16 @@ class CreateFlight extends Component{
       <h1> Create Flight </h1>
       <form className="create-flight-form" onSubmit={(event) => this.handleSubmit(event)}>
       <label>Date </label>
-      <ul><input type="text" name="date" onChange={this.handleChange} placeholder="Date"/> </ul>
+      {/* <ul>< DatePicker name="date"value={this.}  onChange={this.handleChange}/></ul> */}
+      <ul><input type="text" name="date" value={this.state.date} onChange={this.handleChange} placeholder="Date"/> </ul>
       <label>Flight Time </label>
-      <ul><input type="textarea" name="flightTime"  onChange={this.handleChange} placeholder="Expected flight time"/> </ul>
+      <ul><input type="textarea" name="flightTime" value={this.state.flightTime}   onChange={this.handleChange} placeholder="Expected flight time"/> </ul>
          <label>Plane number </label>
-       <ul>  <input type="textarea" name="planeNumber" onChange={this.handleChange} placeholder="which plane"/> </ul>
+       <ul>  <input type="textarea" name="planeNumber" value={this.state.planeNumber} onChange={this.handleChange} placeholder="which plane"/> </ul>
        <label>Destination </label>
-       <ul>  <input type="textarea" name="destination" onChange={this.handleChange} placeholder="Destination"/> </ul>
+       <ul>  <input type="textarea" name="destination" value={this.state.destination} onChange={this.handleChange} placeholder="Destination"/> </ul>
        
-       <ul>  <input type="textarea" name="pilot" onChange={this.handleChange} placeholder="Pilot"/> </ul>
+       <ul>  <input type="textarea" name="pilot" value={this.state.pilot} onChange={this.handleChange} placeholder="Pilot"/> </ul>
 
          <button type="submit"className="btn"> Submit </button>
       </form>
@@ -70,12 +72,10 @@ class CreateFlight extends Component{
   }
 
 }
-function mapStateToProps(state) {
+function mapStateToProps({flights}) {
   debugger
   return {
-    flights: state.flights
-     
-  }
+    flights  }
     // flightTime: state.flightTime,
     // date: state.date,
     // planeNumber: state.planeNumber}
