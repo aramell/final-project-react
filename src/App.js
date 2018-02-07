@@ -16,6 +16,7 @@ import configureStore from './store/configureStore';
 import { loadFlights, addFlight } from './actions/flightActions';
 import { BrowserRouter } from 'react-router-dom';
 import  HomePage  from './components/HomePage';
+import ShowFlight from './components/showFlight';
 
 const App = (props) => {
   return (

@@ -2,16 +2,11 @@ import  React, {component} from 'react';
 import { connect } from 'react-redux';
 
 
-
 class ShowFlight extends React.Component {
-  constructor(props){
-    super()
+
+  componentDidMount(){
+
   }
-
-  // componentDidMount(){
-
-  // }
-  
 
   render(){
     return(
@@ -22,9 +17,9 @@ class ShowFlight extends React.Component {
   }
 }
 
-function mapStateToProps(flights){
-  return {
-    flights
+function mapStateToProps(state){
+  return{ 
+    flights: state.flights
   }
 }
 
