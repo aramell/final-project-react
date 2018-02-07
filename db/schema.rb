@@ -18,7 +18,9 @@ ActiveRecord::Schema.define(version: 20180204143702) do
     t.string "planeNumber"
     t.integer "plane_id"
     t.string "squawks"
+    t.string "pilot"
     t.string "flightTime"
+    t.string "destination"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

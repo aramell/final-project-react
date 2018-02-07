@@ -14,7 +14,7 @@ import { bindActionCreators } from 'redux';
 // import addFlight from './actions/addFlight';
 import flightGetter from './actions/flightGetter';
 import configureStore from './store/configureStore';
-import { loadFlights } from './actions/flightActions';
+import { loadFlights, addFlight } from './actions/flightActions';
 
 class App extends Component {
   constructor(props){
@@ -31,8 +31,8 @@ class App extends Component {
       
     }
     addFlight = flight =>{
-      
-      flightGetter.createFlights(flight).then(flight => this.setState({flight: this.state.flights.concat(flight)}))
+      this.props.store.dispatch(addFlight(flight))
+      // flightGetter.createFlights(flight).then(flight => this.setState({flight: this.state.flights.concat(flight)}))
       
     }
   render() {
@@ -40,14 +40,15 @@ class App extends Component {
     return (
       <div className="App">
       {/* <NavBar /> */}
-      <div className="create-flight">
-      <CreateFlight flight={this.addFlight}/>
-      </div>
-      <div className="weather-container">
-      <WeatherContainer />
-      </div>
-      <FlightContainer flights={this.props.flights}/>
-
+        <div className="flight-index">
+            <FlightContainer flights={this.props.flights}/>
+        </div>
+         <div className="create-flight">
+          <CreateFlight flight={this.addFlight}/>
+         </div>
+         <div className="weather-container">
+          <WeatherContainer />
+         </div>
       </div>
     );
   }
