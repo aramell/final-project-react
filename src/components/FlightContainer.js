@@ -3,6 +3,9 @@ import Flight from './Flight'
 // import fetchFlights from '../actions/fetchFlights';
 // import { thunk } from 'redux-thunk';
 import CreateFlight from './CreateFlight'
+import { loadFlights } from '../actions/flightActions';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 
 class FlightContainer extends React.Component {
   constructor(){
@@ -16,15 +19,8 @@ class FlightContainer extends React.Component {
     
   }
   componentDidMount(){
-    // const url = "http://localhost:3000/flights"
-    // // debugger
-    // // dispatch({ type: 'START_ADDING_FLIGHTS_REQUEST' });
-    //   return dispatch =>{
-    //     fetch(url)
-    //   .then(response => response.json())
-    //   .then(flights => dispatch({ type: 'ADD_FLIGHTS', flights }));
-    // debugger
-    // }
+    this.props.loadFlights()
+
   }
   
   handleChange = event =>{
@@ -41,9 +37,24 @@ class FlightContainer extends React.Component {
   }
 
 }
+function mapDispatchToProps(dispatch){
+   return  bindActionCreators({
+      loadFlights: loadFlights
+   }, dispatch)
+  }
+
 // mapStateToProps = state =>{
 //   return{
 //     flights: state.flights
 //   }
 // }
-export default FlightContainer
+export default connect(null, mapDispatchToProps)(FlightContainer)
+
+// function mapDispatchToProps(dispatch){ 
+//   return bindActionCreators({
+//     addFlight: addFlight
+//   }, dispatch)
+// } 
+// export default connect(mapStateToProps, mapDispatchToProps)(CreateFlight)
+
+// export default FlightContainer

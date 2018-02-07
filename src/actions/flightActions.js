@@ -1,10 +1,11 @@
 
 import flightGetter from './flightGetter';
 import * as types from './actionTypes'
+import { thunk } from 'redux-thunk';
 
 export  function addFlight(flight){
   return function (dispatch){
-    
+
     return flightGetter.createFlights(flight).then(flight=>{
       dispatch(createFlightSuccess(flight))
     }).catch(error => {throw(error)})
