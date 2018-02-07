@@ -7,15 +7,16 @@ import ShowFlight from './showFlight';
 
  
 const Flight = ({match, flights}) => {
-
   
-  const renderFlights =  flights.map((flight) => <div><ul><Link key={flight.id} to={`/flights/${flight.id}`}> Date: {flight.date} - Pilot: {flight.pilot} - Plane: {flight.planeNumber} </Link></ul> </div>)
+  
+  const renderFlights =  flights.map((flight) => <div><ul><Link key={flight.id} to={`/flights/${flight.id}`}> Date: {flight.date} - Pilot: {flight.pilot} - Plane: {flight.planeNumber} </Link>
+    <Route path={`/flights/:flightId`} component={ShowFlight}/></ul> </div>)
+
      
   return(
     <div>
       <h2> Future Flights </h2>
       {flights ? renderFlights : "none"}
-      {/* // <p>{flights > 0 renderFlights : "no flights yet"} </p> */}
       
     </div>
   )

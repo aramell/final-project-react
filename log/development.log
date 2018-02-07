@@ -4023,3 +4023,279 @@ Processing by Api::FlightsController#index as */*
 Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/api/flights" for 127.0.0.1 at 2018-02-07 10:43:39 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::FlightsController#index as */*
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Completed 200 OK in 20ms (Views: 16.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/flights" for 127.0.0.1 at 2018-02-07 10:50:15 -0500
+Processing by Api::FlightsController#index as */*
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/flights" for 127.0.0.1 at 2018-02-07 10:50:20 -0500
+Processing by Api::FlightsController#index as */*
+  [1m[36mFlight Load (1.0ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/flights" for 127.0.0.1 at 2018-02-07 11:18:17 -0500
+Processing by Api::FlightsController#index as */*
+  [1m[36mFlight Load (0.5ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/flights" for 127.0.0.1 at 2018-02-07 11:18:21 -0500
+Processing by Api::FlightsController#index as */*
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/flights" for 127.0.0.1 at 2018-02-07 11:24:14 -0500
+Processing by Api::FlightsController#index as */*
+  [1m[36mFlight Load (0.6ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/flights" for 127.0.0.1 at 2018-02-07 11:26:50 -0500
+Processing by Api::FlightsController#index as */*
+  [1m[36mFlight Load (0.5ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/flights" for 127.0.0.1 at 2018-02-07 11:27:02 -0500
+Processing by Api::FlightsController#index as */*
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/flights" for 127.0.0.1 at 2018-02-07 11:27:15 -0500
+Processing by Api::FlightsController#index as */*
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/flights" for 127.0.0.1 at 2018-02-07 11:28:26 -0500
+Processing by Api::FlightsController#index as */*
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/flights" for 127.0.0.1 at 2018-02-07 11:29:23 -0500
+Processing by Api::FlightsController#index as */*
+  [1m[36mFlight Load (0.9ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/flights" for 127.0.0.1 at 2018-02-07 11:32:21 -0500
+Processing by Api::FlightsController#index as */*
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/flights" for 127.0.0.1 at 2018-02-07 11:32:36 -0500
+Processing by Api::FlightsController#index as */*
+  [1m[36mFlight Load (0.4ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/flights" for 127.0.0.1 at 2018-02-07 11:32:42 -0500
+Processing by Api::FlightsController#index as */*
+  [1m[36mFlight Load (1.6ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Completed 200 OK in 32ms (Views: 29.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/flights" for 127.0.0.1 at 2018-02-07 11:52:00 -0500
+Processing by Api::FlightsController#index as */*
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/flights" for 127.0.0.1 at 2018-02-07 11:56:54 -0500
+Processing by Api::FlightsController#index as */*
+  [1m[36mFlight Load (1.8ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Completed 200 OK in 27ms (Views: 24.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/flights" for 127.0.0.1 at 2018-02-07 12:15:37 -0500
+Processing by Api::FlightsController#index as */*
+  [1m[36mFlight Load (1.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Completed 200 OK in 24ms (Views: 21.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/flights" for 127.0.0.1 at 2018-02-07 12:16:07 -0500
+Processing by Api::FlightsController#index as */*
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/flights" for 127.0.0.1 at 2018-02-07 12:19:45 -0500
+Processing by Api::FlightsController#index as */*
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/flights" for 127.0.0.1 at 2018-02-07 12:20:14 -0500
+Processing by Api::FlightsController#index as */*
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/flights" for 127.0.0.1 at 2018-02-07 12:20:57 -0500
+Processing by Api::FlightsController#index as */*
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/flights" for 127.0.0.1 at 2018-02-07 12:21:19 -0500
+Processing by Api::FlightsController#index as */*
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/flights" for 127.0.0.1 at 2018-02-07 12:21:42 -0500
+Processing by Api::FlightsController#index as */*
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/flights" for 127.0.0.1 at 2018-02-07 12:22:11 -0500
+Processing by Api::FlightsController#index as */*
+  [1m[36mFlight Load (1.0ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/flights" for 127.0.0.1 at 2018-02-07 12:25:27 -0500
+Processing by Api::FlightsController#index as */*
+  [1m[36mFlight Load (0.4ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/flights" for 127.0.0.1 at 2018-02-07 12:26:10 -0500
+Processing by Api::FlightsController#index as */*
+  [1m[36mFlight Load (0.4ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/flights" for 127.0.0.1 at 2018-02-07 12:26:38 -0500
+Processing by Api::FlightsController#create as */*
+  Parameters: {"flight"=>{"flightTime"=>"4", "date"=>"9/30", "planeNumber"=>"5165r", "destination"=>"beach", "pilot"=>"andrew"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.6ms)[0m  [1m[32mINSERT INTO "flights" ("date", "planeNumber", "pilot", "flightTime", "destination", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2018-09-30 00:00:00"], ["planeNumber", "5165r"], ["pilot", "andrew"], ["flightTime", "4"], ["destination", "beach"], ["created_at", "2018-02-07 17:26:38.643936"], ["updated_at", "2018-02-07 17:26:38.643936"]]
+  [1m[35m (23.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 37ms (Views: 0.5ms | ActiveRecord: 27.2ms)
+
+
+Started POST "/api/flights" for 127.0.0.1 at 2018-02-07 12:28:14 -0500
+Processing by Api::FlightsController#create as */*
+  Parameters: {"flight"=>{"flightTime"=>"3", "date"=>"9/30", "planeNumber"=>"djfakd;fjd", "destination"=>"fkdjas;fldj", "pilot"=>"andrew"}}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (5.3ms)[0m  [1m[32mINSERT INTO "flights" ("date", "planeNumber", "pilot", "flightTime", "destination", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2018-09-30 00:00:00"], ["planeNumber", "djfakd;fjd"], ["pilot", "andrew"], ["flightTime", "3"], ["destination", "fkdjas;fldj"], ["created_at", "2018-02-07 17:28:14.741798"], ["updated_at", "2018-02-07 17:28:14.741798"]]
+  [1m[35m (14.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 49ms (Views: 1.9ms | ActiveRecord: 20.4ms)
+
+
+Started POST "/api/flights" for 127.0.0.1 at 2018-02-07 12:29:04 -0500
+Processing by Api::FlightsController#create as */*
+  Parameters: {"flight"=>{"flightTime"=>"dfdsf", "date"=>"dfds", "planeNumber"=>"", "destination"=>"f", "pilot"=>"ffffffffff"}}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "flights" ("planeNumber", "pilot", "flightTime", "destination", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["planeNumber", ""], ["pilot", "ffffffffff"], ["flightTime", "dfdsf"], ["destination", "f"], ["created_at", "2018-02-07 17:29:04.870189"], ["updated_at", "2018-02-07 17:29:04.870189"]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 20ms (Views: 0.6ms | ActiveRecord: 5.9ms)
+
+
+Started POST "/api/flights" for 127.0.0.1 at 2018-02-07 12:33:40 -0500
+Processing by Api::FlightsController#create as */*
+  Parameters: {"flight"=>{"flightTime"=>"sdfdsfdf", "date"=>"fdsaf", "planeNumber"=>"dfadsfdf", "destination"=>"fdsfdf", "pilot"=>"dfdfdafdfdsf"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "flights" ("planeNumber", "pilot", "flightTime", "destination", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["planeNumber", "dfadsfdf"], ["pilot", "dfdfdafdfdsf"], ["flightTime", "sdfdsfdf"], ["destination", "fdsfdf"], ["created_at", "2018-02-07 17:33:40.956769"], ["updated_at", "2018-02-07 17:33:40.956769"]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 36ms (Views: 1.0ms | ActiveRecord: 7.4ms)
+
+
+Started POST "/api/flights" for 127.0.0.1 at 2018-02-07 12:35:50 -0500
+Processing by Api::FlightsController#create as */*
+  Parameters: {"flight"=>{"flightTime"=>"dfdsf", "date"=>"dfafdf", "planeNumber"=>"dfdsfsd", "destination"=>"fdsfd", "pilot"=>"fdsfsd"}}
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (5.0ms)[0m  [1m[32mINSERT INTO "flights" ("planeNumber", "pilot", "flightTime", "destination", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["planeNumber", "dfdsfsd"], ["pilot", "fdsfsd"], ["flightTime", "dfdsf"], ["destination", "fdsfd"], ["created_at", "2018-02-07 17:35:50.892578"], ["updated_at", "2018-02-07 17:35:50.892578"]]
+  [1m[35m (10.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 30ms (Views: 0.5ms | ActiveRecord: 16.2ms)
+
+
+Started GET "/api/flights" for 127.0.0.1 at 2018-02-07 12:36:49 -0500
+Processing by Api::FlightsController#index as */*
+  [1m[36mFlight Load (0.6ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/flights" for 127.0.0.1 at 2018-02-07 12:37:06 -0500
+Processing by Api::FlightsController#index as */*
+  [1m[36mFlight Load (0.4ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/flights" for 127.0.0.1 at 2018-02-07 12:37:08 -0500
+Processing by Api::FlightsController#index as */*
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/flights" for 127.0.0.1 at 2018-02-07 12:37:09 -0500
+Processing by Api::FlightsController#index as */*
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/flights" for 127.0.0.1 at 2018-02-07 12:37:24 -0500
+Processing by Api::FlightsController#create as */*
+  Parameters: {"flight"=>{"flightTime"=>"dsfdfsd", "date"=>"fdaf", "planeNumber"=>"fdfdsa", "destination"=>"fdaf", "pilot"=>"dfdfdafsdf"}}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[32mINSERT INTO "flights" ("planeNumber", "pilot", "flightTime", "destination", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["planeNumber", "fdfdsa"], ["pilot", "dfdfdafsdf"], ["flightTime", "dsfdfsd"], ["destination", "fdaf"], ["created_at", "2018-02-07 17:37:24.017311"], ["updated_at", "2018-02-07 17:37:24.017311"]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 19ms (Views: 0.9ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/api/flights" for 127.0.0.1 at 2018-02-07 12:37:47 -0500
+Processing by Api::FlightsController#index as */*
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/flights" for 127.0.0.1 at 2018-02-07 12:38:19 -0500
+Processing by Api::FlightsController#index as */*
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/flights" for 127.0.0.1 at 2018-02-07 12:38:35 -0500
+Processing by Api::FlightsController#index as */*
+  [1m[36mFlight Load (0.7ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/flights" for 127.0.0.1 at 2018-02-07 12:38:45 -0500
+Processing by Api::FlightsController#create as */*
+  Parameters: {"flight"=>{"flightTime"=>"dfdsf", "date"=>"dfdsaf", "planeNumber"=>"sdfdsfds", "destination"=>"fdfadfd", "pilot"=>"afdsfdfdf"}}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (7.4ms)[0m  [1m[32mINSERT INTO "flights" ("planeNumber", "pilot", "flightTime", "destination", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["planeNumber", "sdfdsfds"], ["pilot", "afdsfdfdf"], ["flightTime", "dfdsf"], ["destination", "fdfadfd"], ["created_at", "2018-02-07 17:38:45.243713"], ["updated_at", "2018-02-07 17:38:45.243713"]]
+  [1m[35m (10.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 41ms (Views: 2.1ms | ActiveRecord: 18.8ms)
+
+

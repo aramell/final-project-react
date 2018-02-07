@@ -24,8 +24,8 @@ const App = (props) => {
       <div className="app">
         <NavBar />
         <Route exact path="/" component={HomePage} />
-        <Route exact path="/flights" component={FlightContainer} />
-        <Route exact path="/new" component={CreateFlight} />
+        <Route  path="/flights" component={FlightContainer} />
+        <Route  path="/new" component={CreateFlight} />
 
         {/* <Route exact path="/actors" component={Actors} />
         <Route exact path="/directors" component={Directors} />

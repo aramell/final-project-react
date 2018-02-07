@@ -3,18 +3,19 @@ import initialState from './initialState'
 
 export default function flightReducer(state = initialState.flights, action) {
   console.log(action)
+  
   switch(action.type){
     case types.LOAD_FLIGHTS_SUCCESS:
     return action.flights
-  switch (action.type){
+  
     case types.ADD_FLIGHT_SUCCESS:
     
     // return  state.concat([action.flight])
-      return [action.flight, ...state]
-        // ...state.filter(flight => flight.id !== action.flight.id ),
-        // Object.assign({}, action.flight)]
+      return [
+        ...state.filter(flight => flight.id !== action.flight.id ),
+        Object.assign({}, action.flight)]
     
-    }
+    
   
     ///////////////////////////
     // debugger

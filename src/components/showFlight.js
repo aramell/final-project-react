@@ -2,26 +2,28 @@ import  React, {component} from 'react';
 import { connect } from 'react-redux';
 
 
-class ShowFlight extends React.Component {
+const ShowFlight = flight => {
 
-  componentDidMount(){
+  // const flight = state.flights.find(flight => flight.id == ownProps.match.params.movied)
+  <div>
+      <h3> Flight Show </h3>
+      {flight}
+    </div>
 
-  }
 
-  render(){
-    return(
-      <div>
-          test
-      </div>
-    )
-  }
 }
 
-function mapStateToProps(state){
-  return{ 
-    flights: state.flights
+const mapStateToProps = (state, ownProps) => {
+  const flight = state.flights.find(flight => flight.id == ownProps.match.params.flightId)
+  if (flight){
+    return {flight}
+  } else {
+    return {flight: {} }
   }
-}
+
+  // flightId: ownProps.match.params.flightId
+  }
+
 
 export default connect(mapStateToProps)(ShowFlight)
 // export default ShowFlight
