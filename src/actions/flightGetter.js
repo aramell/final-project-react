@@ -3,12 +3,7 @@
 import { React } from 'react';
 
 class flightGetter {
-  
-  //   fetchFlights(){
-  // return fetch(`${url}/flights`)
-  
-  //     .then(response => response.json())
-  //   }
+
 
     static createFlights(flight){
       return fetch('http://localhost:3000/api/flights', {

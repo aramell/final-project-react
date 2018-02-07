@@ -23,11 +23,7 @@ class App extends Component {
   }
 
     componentDidMount(){
-      // this.props.loadFlights()
-      // loadFlights()
-          // store.dispatch(loadFlights())
 
-      // flightGetter.fetchFlights().then(flights => this.setState({flights}))
       
     }
     addFlight = flight =>{
