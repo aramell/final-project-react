@@ -44,7 +44,7 @@ class App extends Component {
             <FlightContainer flights={this.props.flights}/>
         </div>
          <div className="create-flight">
-          <CreateFlight flight={this.addFlight}/>
+          <CreateFlight addflight={this.addFlight}/>
          </div>
          <div className="weather-container">
           <WeatherContainer />

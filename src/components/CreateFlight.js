@@ -33,12 +33,12 @@ class CreateFlight extends Component{
    
     // this.props.addFlight(this.state)
     
-    this.props.flight(this.state)
-    this.setState({
-              flightTime: '',
-              date: '',
-              planeNumber: ''
-  })
+    this.props.addflight(this.state)
+  //   this.setState({
+  //             flightTime: '',
+  //             date: '',
+  //             planeNumber: ''
+  // })
 }
   render(){
 
@@ -54,7 +54,7 @@ class CreateFlight extends Component{
        <ul>  <input type="textarea" name="planeNumber" onChange={this.handleChange} placeholder="which plane"/> </ul>
        <label>Destination </label>
        <ul>  <input type="textarea" name="destination" onChange={this.handleChange} placeholder="Destination"/> </ul>
-       <label>Pilot</label>
+       
        <ul>  <input type="textarea" name="pilot" onChange={this.handleChange} placeholder="Pilot"/> </ul>
 
          <button type="submit"className="btn"> Submit </button>
