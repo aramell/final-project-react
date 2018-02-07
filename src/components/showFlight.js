@@ -3,14 +3,16 @@ import { connect } from 'react-redux';
 
 
 const ShowFlight = flight => {
-
+debugger
+// const flight = flight.find(({id}) => id === match.params.flightId)
   // const flight = state.flights.find(flight => flight.id == ownProps.match.params.movied)
-  <div>
+return(
+<div>
       <h3> Flight Show </h3>
       {flight}
     </div>
 
-
+)
 }
 
 const mapStateToProps = (state, ownProps) => {

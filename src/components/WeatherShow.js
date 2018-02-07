@@ -4,8 +4,8 @@ import React from 'react'
 const WeatherShow = props => (
   
   <div className="weather-container">
-    <h3> Current Weather at MMU </h3>
-    {props.weather} <br/> <br/>
+    <h3> Current Weather at Morristown, NJ </h3>
+    <p>{props.weather} </p>
     <label>Input Aiport Code for Weather </label>
     <form onSubmit={props.handleSubmit}>
     <input type="text" onChange={props.handleChange}  />
