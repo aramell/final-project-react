@@ -33,10 +33,8 @@ class CreateFlight extends Component{
 
   handleSubmit = event => {
     event.preventDefault()
-   
-    // this.props.addFlight(this.state)
-    
-    this.props.addflight(this.state)
+       
+    this.props.addFlight(this.state)
     this.setState({
       flightTime: '',
       date: '',
@@ -73,7 +71,7 @@ class CreateFlight extends Component{
 
 }
 function mapStateToProps({flights}) {
-  debugger
+  
   return {
     flights  }
     // flightTime: state.flightTime,
