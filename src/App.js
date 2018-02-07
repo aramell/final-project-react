@@ -22,10 +22,13 @@ const App = (props) => {
   return (
     <Router>
       <div className="app">
+      <switch>
         <NavBar />
         <Route exact path="/" component={HomePage} />
         <Route  path="/flights" component={FlightContainer} />
+        <Route  path="/flights/:id" component={ShowFlight} />        
         <Route  path="/new" component={CreateFlight} />
+        </switch>
       </div>
     </Router>
   );
