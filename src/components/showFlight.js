@@ -25,7 +25,7 @@ const ShowFlight = ({flight}) => {
   
   const mapStateToProps =(state, ownProps) =>{
     
-    const flight = state.flights.find(flight => flight.id == ownProps.match.params.id)
+    const flight = state.flights.find(flight => flight.id === ownProps.match.params.id)
     
     if(flight){
       return {flight}

@@ -9,7 +9,7 @@ class CreateFlights < ActiveRecord::Migration[5.1]
       t.string :pilot
       t.string :flightTime
       t.string :destination
-      t.integer :likes
+      t.integer :likes, default: 0
 
       t.timestamps
     end

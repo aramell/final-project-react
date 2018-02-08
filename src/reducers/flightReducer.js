@@ -13,10 +13,14 @@ export default function flightReducer(state = initialState.flights, action) {
     return  state.concat([action.flight])
 
     case types.ADD_LIKE_SUCCESS:
+      // debugger
       return state.map((flight)=> {
-        if (flight.id === action.flight){
+        
+        if (flight.id === action.flight.id){
           return Object.assign({}, flight, {likes: flight.likes+1})
         }
+        return flight
+
       })
     
       // return [

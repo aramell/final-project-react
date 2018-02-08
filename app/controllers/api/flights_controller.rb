@@ -30,6 +30,17 @@ class Api::FlightsController < ApplicationController
       f.json {render json: @flight}
     end
   end
+  def update
+    # binding.pry
+    set_flight
+    
+      @flight.update(flight_params)
+
+        respond_to do |f|
+          f.json {render :json => @flight}
+        end
+     
+  end
 
   def destroy
     set_flight
@@ -38,9 +49,9 @@ class Api::FlightsController < ApplicationController
 
   private
   def flight_params
-    params.require(:flight).permit(:time, :date, :pilot,:flightTime, :planeNumber, :squawks, :destination)
+    params.require(:flight).permit(:time, :date, :pilot,:flightTime, :plane_id, :id, :created_at, :updated_at, :planeNumber, :squawks, :destination, :likes)
   end
   def set_flight
-    @flight = Flight.bind_by(:id => params[:id])
+    @flight = Flight.find_by(:id => params[:id])
   end
 end

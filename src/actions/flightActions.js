@@ -26,6 +26,7 @@ export function createFlightSuccess(flight){
 // export function deleteFlightSuccess(flight){
 //   return {type: types.DELETE_FLIGHT_SUCCESS, flight}
     export function addLike(flight){
+      // debugger
       return function(dispatch){
         return flightGetter.addLike(flight).then(flight =>{
           dispatch(addLikeSuccess(flight))

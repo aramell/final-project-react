@@ -17,9 +17,10 @@ class flightGetter {
     }
 
     static addLike(flight){
+      
       return fetch(`http://localhost:3000/api/flights/${flight.id}`,
     {
-      method: 'PATCH',
+      method: 'PUT',
       body: JSON.stringify({flight: flight}),
         headers: {
           'Content-Type': 'application/json'

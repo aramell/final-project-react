@@ -2,13 +2,15 @@ import React from 'react'
 
 import FlightCard from './FlightCard'
 
-// import HandleClick from './HandleClick';
-// 
+
 
  
 const Flight = ({match, flights}) => {
   
-  const renderFlights =  flights.map((flight) => <FlightCard flight={flight}/>)
+  const sortedFlights = flights.sort(function (a,b){
+    return b.likes - a.likes
+  })
+  const renderFlights =  sortedFlights.map((flight) => <FlightCard flight={flight}/>)
 
      
   return(
