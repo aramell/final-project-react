@@ -15,7 +15,7 @@ class HomePage extends React.Component{
           <h1>Flight Scheduler </h1>
           <WeatherContainer />
            <FlightIndex />
-           <ShowFlight />
+          
            {/* <FlightPage store={this.store}/>  */}
           <CreateFlight />
       </div>

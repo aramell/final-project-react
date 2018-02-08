@@ -10,10 +10,11 @@ export default function flightReducer(state = initialState.flights, action) {
   
     case types.ADD_FLIGHT_SUCCESS:
     
-    // return  state.concat([action.flight])
-      return [
-        ...state.filter(flight => flight.id !== action.flight.id ),
-        Object.assign({}, action.flight)]
+    return  state.concat([action.flight])
+    
+      // return [
+      //   ...state.filter(flight => flight.id !== action.flight.id ),
+      //   Object.assign({}, action.flight)]
     
     
   
