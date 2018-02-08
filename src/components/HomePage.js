@@ -1,11 +1,9 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
 import WeatherContainer from './WeatherContainer';
 // import FlightContainer from './FlightContainer';
 import CreateFlight from './CreateFlight';
 import FlightIndex from './FlightIndex';
 import FlightPage from './FlightPage';
-import ShowFlight from './showFlight';
 
 class HomePage extends React.Component{
 

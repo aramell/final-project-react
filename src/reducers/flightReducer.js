@@ -11,6 +11,13 @@ export default function flightReducer(state = initialState.flights, action) {
     case types.ADD_FLIGHT_SUCCESS:
     
     return  state.concat([action.flight])
+
+    case types.ADD_LIKE_SUCCESS:
+      return state.map((flight)=> {
+        if (flight.id === action.flight){
+          return Object.assign({}, flight, {likes: flight.likes+1})
+        }
+      })
     
       // return [
       //   ...state.filter(flight => flight.id !== action.flight.id ),

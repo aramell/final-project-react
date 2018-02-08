@@ -1,5 +1,4 @@
-import  React, {Component} from 'react';
-import HomePage from './HomePage';
+import  React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
@@ -7,11 +6,7 @@ import { loadFlights } from '../actions/flightActions';
 import Flight from './Flight';
 
 class FlightIndex extends React.Component {
-  constructor(){ 
-    super()
-    
-    
-  }
+ 
   componentDidMount(){
     this.props.loadFlights()
     

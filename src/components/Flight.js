@@ -1,8 +1,5 @@
-import React, {component} from 'react'
-import ShowFlight from './showFlight'
+import React from 'react'
 
-import { BrowserRouter as Route, Router, Link } from 'react-router-dom';
-import FlightIndex from './FlightIndex'
 import FlightCard from './FlightCard'
 
 // import HandleClick from './HandleClick';

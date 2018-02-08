@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20180204143702) do
     t.string "pilot"
     t.string "flightTime"
     t.string "destination"
+    t.integer "likes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

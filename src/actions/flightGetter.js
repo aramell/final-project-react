@@ -1,6 +1,5 @@
 // const url = "http://localhost:3000/api"
 // import React
-import { React } from 'react';
 
 class flightGetter {
 
@@ -9,6 +8,19 @@ class flightGetter {
       return fetch('http://localhost:3000/api/flights', {
         method: 'POST',
         body: JSON.stringify({flight: flight}),
+        headers: {
+          'Content-Type': 'application/json'
+        },
+         accepts: 'application/json'
+      })
+      .then(response => response.json()).catch(error => {return error})
+    }
+
+    static addLike(flight){
+      return fetch(`http://localhost:3000/api/flights/${flight.id}`,
+    {
+      method: 'PATCH',
+      body: JSON.stringify({flight: flight}),
         headers: {
           'Content-Type': 'application/json'
         },

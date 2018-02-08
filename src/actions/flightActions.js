@@ -1,7 +1,6 @@
 
 import flightGetter from './flightGetter';
 import * as types from './actionTypes'
-import { thunk } from 'redux-thunk';
 
 export  function addFlight(flight){
   return function (dispatch){
@@ -26,7 +25,16 @@ export function createFlightSuccess(flight){
 // }
 // export function deleteFlightSuccess(flight){
 //   return {type: types.DELETE_FLIGHT_SUCCESS, flight}
-// }
+    export function addLike(flight){
+      return function(dispatch){
+        return flightGetter.addLike(flight).then(flight =>{
+          dispatch(addLikeSuccess(flight))
+        }).catch(error => {throw(error)})
+      }
+    }
+    export function addLikeSuccess(flight){
+      return {type: types.ADD_LIKE_SUCCESS, flight}
+    }
   
 export function loadFlights(){
   return function (dispatch){

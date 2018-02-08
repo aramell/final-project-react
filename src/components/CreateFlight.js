@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
-import Flight from './Flight'
 import {connect} from 'react-redux'
-// import addFlight from '../actions/addFlight';
 import { bindActionCreators } from 'redux';
-// import rootReducer from '../reducers/index';
-import FlightContainer from './FlightContainer';
-import { addFlight, loadFlights } from '../actions/flightActions';
+import { addFlight } from '../actions/flightActions';
 import DatePicker from 'react-date-picker'
 
 class CreateFlight extends Component{
