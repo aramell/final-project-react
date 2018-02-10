@@ -17,6 +17,7 @@ const Flight = ({match, flights}) => {
     <div>
       <h2> Future Flights </h2>
       {renderFlights}
+      
       {/* {flights ? renderFlights : "none"} */}
       
     </div>
