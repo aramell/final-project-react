@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux';
 import { addFlight } from '../actions/flightActions';
 import DatePicker from 'react-date-picker'
 import {Field, reduxForm} from 'redux-form'
+import TimePicker from 'rc-time-picker'
 
 import { Link } from 'react-router-dom';
 

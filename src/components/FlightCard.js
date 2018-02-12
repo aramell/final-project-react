@@ -42,11 +42,7 @@ class FlightCard extends Component{
   // }
 
   persistLike(event){
-    // this.setState({
-    //   likes: this.state.likes +1
-
-    // })
-    // debugger
+ 
     const updatedFlight = Object.assign({}, this.props.flight, {likes: this.props.flight.likes +1})
     this.props.addLike(updatedFlight)
   }
@@ -56,7 +52,7 @@ class FlightCard extends Component{
   }
   render(){
       const date = this.props.flight.date
-debugger
+
     return(
    
     <div><ul><Link key={this.props.flight.id} to={`/flights/${this.props.flight.id}`}> Date: {moment(date).format('MMMM Do YYYY, h:mm:ss a')} - Pilot: {this.props.flight.pilot} - Plane: {this.props.flight.planeNumber}- Destination: {this.props.flight.destination}</Link>
