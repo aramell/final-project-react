@@ -27,23 +27,18 @@ class FlightCard extends Component{
   //   })
   //   debugger
   // }
-  callAPI(event){
-    console.log("a")
-    fetch('http://localhost:3000/api/flights')
-    .then(res => {
-      if (res.status !== 200){
-        throw new Error("very bad request")
-      } 
-      else {
-      console.log("b")
-      return res.json()
-      }})
-    .then(data => console.log( "c", data))
-    .catch(err => console.log("d", err))
-    console.log("e")
-    //a,e,b,c + data, d + err,
+  // callAPI(event){
+  //   fetch('http://localhost:3000/api/flights')
+  //   .then(res => {
+  //     if (res.status !== 200){
+  //       throw new Error("very bad request")
+  //     } 
+  //     else return res.json()
+  //     })
+    
+  //   //a,e,b,c + data, d + err,
   
-  }
+  // }
 
   persistLike(event){
     // this.setState({
@@ -55,7 +50,6 @@ class FlightCard extends Component{
     this.props.addLike(updatedFlight)
   }
   render(){
-    console.log(this.props.flight)
     return(
    
     <div><ul><Link key={this.props.flight.id} to={`/flights/${this.props.flight.id}`}> Date: {this.props.flight.date} - Pilot: {this.props.flight.pilot} - Plane: {this.props.flight.planeNumber}- Destination: {this.props.flight.destination}</Link>
