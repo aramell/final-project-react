@@ -39,18 +39,18 @@ class Calendar extends React.Component {
 
 
     <BigCalendar
-        events={myEventsList}
-        views={allViews}
-        step={30}
-        timeslots={2}
-        defaultView='week'
-        defaultDate={new Date()}
-        components={{
-                     event: Event,
-                     agenda: {
-                              event: EventAgenda
-                 }
-        }}
+        // events={myEventsList}
+        // views={allViews}
+        // step={30}
+        // timeslots={2}
+        // defaultView='week'
+        // defaultDate={new Date()}
+        // components={{
+        //              event: Event,
+        //              agenda: {
+        //                       event: EventAgenda
+        //          }
+        // }}
        />
     )}
 

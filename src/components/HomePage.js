@@ -4,7 +4,7 @@ import WeatherContainer from './WeatherContainer';
 import CreateFlight from './CreateFlight';
 import FlightIndex from './FlightIndex';
 import FlightPage from './FlightPage';
-import Calendar from '../containers/Calendar'
+// import Calendar from '../containers/Calendar'
 
 class HomePage extends React.Component{
 
@@ -14,7 +14,7 @@ class HomePage extends React.Component{
           <h1>Flight Scheduler </h1>
           <WeatherContainer />
            <FlightIndex />
-           <Calendar />
+           {/* <Calendar /> */}
           
            {/* <FlightPage store={this.store}/>  */}
           <CreateFlight />
