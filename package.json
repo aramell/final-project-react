@@ -1,7 +1,7 @@
 {
   "name": "final-project-react",
   "version": "0.1.0",
-  "proxy": "http://localhost:3001",
+  "proxy": "https://flight-scheduler.herokuapp.com/",
   "private": true,
   "dependencies": {
     "cuid": "^2.0.2",
