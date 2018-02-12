@@ -5,7 +5,7 @@ class flightGetter {
 
 
     static createFlights(flight){
-      return fetch('https://flight-scheduler.herokuapp.com/api/flights', {
+      return fetch('https://blooming-wave-82973.herokuapp.com/api/flights', {
         method: 'POST',
         body: JSON.stringify({flight: flight}),
         headers: {
@@ -18,7 +18,7 @@ class flightGetter {
 
     static addLike(flight){
       
-      return fetch(`https://flight-scheduler.herokuapp.com/api/flights/${flight.id}`,
+      return fetch(`https://blooming-wave-82973.herokuapp.com/api/flights/${flight.id}`,
     {
       method: 'PUT',
       body: JSON.stringify({flight: flight}),
@@ -41,7 +41,7 @@ class flightGetter {
     //   .then(response => response.json()).catch(error => {return error})
     // }
      static loadAllFlights(){
-        return fetch('https://flight-scheduler.herokuapp.com/api/flights').then(response => {return response.json()
+        return fetch('https://blooming-wave-82973.herokuapp.com/api/flights').then(response => {return response.json()
         }).catch(error => { return error})
       }
   
