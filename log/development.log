@@ -10980,3 +10980,10 @@ Processing by Api::FlightsController#index as */*
 Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/api/flights" for 127.0.0.1 at 2018-02-12 15:47:29 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::FlightsController#index as */*
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+Completed 200 OK in 21ms (Views: 17.0ms | ActiveRecord: 1.0ms)
+
+
