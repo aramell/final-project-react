@@ -10,10 +10,10 @@ const ShowFlight = ({flight}) => {
       <div>
         <h3> Flight Details</h3>
        <p>  Pilot: {flight.pilot} </p>
-       <ul>  Pilot: {flight.planeNumber} </ul>
-       <ul>  Pilot: {flight.time} </ul>
-       <ul>  Pilot: {flight.date} </ul>
-       <ul>  Pilot: {flight.destination} </ul>
+       <ul>  Plane Number: {flight.planeNumber} </ul>
+       <ul>  Flight Time: {flight.time} </ul>
+       <ul>  Date: {flight.date} </ul>
+       <ul>  Destination: {flight.destination} </ul>
 
 
       </div>

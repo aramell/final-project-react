@@ -45,6 +45,9 @@ class Api::FlightsController < ApplicationController
   def destroy
     set_flight
     @flight.delete
+    respond_to do |f|
+      f.json {render :json => @flight}
+    end
   end
 
   private

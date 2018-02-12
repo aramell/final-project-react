@@ -1,7 +1,6 @@
 export default function planeReducer(state = {
   planes: []
 }, action) {
-  console.log(action)
   switch(action.type){
     case 'ADD_PLANE':
     

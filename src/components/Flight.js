@@ -10,8 +10,9 @@ const Flight = ({match, flights}) => {
   const sortedFlights = flights.sort(function (a,b){
     return b.likes - a.likes
   })
-  const renderFlights =  sortedFlights.map((flight) => <FlightCard flight={flight}/>)
 
+  const renderFlights =  sortedFlights.map((flight) => <FlightCard flight={flight}/>)
+  
      
   return(
     <div>

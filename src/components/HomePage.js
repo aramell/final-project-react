@@ -17,7 +17,7 @@ class HomePage extends React.Component{
            {/* <Calendar /> */}
           
            {/* <FlightPage store={this.store}/>  */}
-          {/* <CreateFlight /> */}
+          <CreateFlight />
       </div>
     )
   }
