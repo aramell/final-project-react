@@ -72,10 +72,31 @@ class CreateFlight extends Component{
 
   render(){
     const { handleSubmit} = this.props
-
+    const datePicker = ({ input, label, type, className, selected, meta: { touched, error } }) => (
+      <div>
+        <div>
+          <DatePicker {...input}
+            selected={selected} placeholder={label}
+            type={type} className={className}
+            peekNextMonth
+            showMonthDropdown
+            showYearDropdown
+            dropdownMode="select"
+          />
+          {touched && error && <span className="error_field">{error}</span>}
+        </div>
+      </div>
+    )
     return( 
       <div className="flight">
         <form onSubmit={handleSubmit((event) => this.onSubmit(event))}>
+        <Field
+            name="date"
+            component={datePicker}
+            label="date"
+            type="text"
+            selected={this.renderfield}
+          />
           <Field 
             name="flightTime"
             component={this.renderField}
@@ -86,11 +107,11 @@ class CreateFlight extends Component{
            label="Destination"
            component={this.renderField}
            />
-           <Field 
+           {/* <Field 
            name="date"
            label="Date"
            component={this.renderField}
-           />
+           /> */}
            <Field 
            name="plane"
            label="Plane"

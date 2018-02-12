@@ -4,8 +4,9 @@ import {Link, Route} from 'react-router-dom'
 import ShowFlight from './showFlight';
 import { bindActionCreators } from 'redux';
 import  {addLike, deleteFlight}  from '../actions/flightActions';
-
+// import moment from 'moment'
 import { connect } from 'react-redux';
+var moment = require('moment')
 
 class FlightCard extends Component{
   constructor(props){
@@ -54,9 +55,11 @@ class FlightCard extends Component{
     this.props.deleteFlight(flight)
   }
   render(){
+      const date = this.props.flight.date
+debugger
     return(
    
-    <div><ul><Link key={this.props.flight.id} to={`/flights/${this.props.flight.id}`}> Date: {this.props.flight.date} - Pilot: {this.props.flight.pilot} - Plane: {this.props.flight.planeNumber}- Destination: {this.props.flight.destination}</Link>
+    <div><ul><Link key={this.props.flight.id} to={`/flights/${this.props.flight.id}`}> Date: {moment(date).format('MMMM Do YYYY, h:mm:ss a')} - Pilot: {this.props.flight.pilot} - Plane: {this.props.flight.planeNumber}- Destination: {this.props.flight.destination}</Link>
 <Route path={`/flights/:flightId`} component={ShowFlight}/><button type="submit"  onClick={(event) => this.callAPI(event)}>Like</button> {this.props.flight.likes}<button type="submit" onClick={(event)=>this.handleDelete(event)}>Delete</button></ul></div>
       )
     }
