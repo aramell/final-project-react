@@ -5,6 +5,8 @@ import { addFlight } from '../actions/flightActions';
 import DatePicker from 'react-date-picker'
 import {Field, reduxForm} from 'redux-form'
 
+import { Link } from 'react-router-dom';
+
 class CreateFlight extends Component{
   constructor(props){
     super(props)
@@ -50,18 +52,32 @@ class CreateFlight extends Component{
           type="text"
            {...field.input}
       />
-
+          {field.meta.touched ? field.meta.error : ''}
+          {/* automatically added  */}
     </div>
     )
+  }
+  onSubmit(value) {
+    this.props.addFlight(value)
+    this.state = {
+      flightTime: '',
+      date: '',
+      planeNumber: '',
+      destination: '',
+      pilot: ''
+}
+
   }
  
 
   render(){
+    const { handleSubmit} = this.props
 
     return( 
       <div className="flight">
+        <form onSubmit={handleSubmit((event) => this.onSubmit(event))}>
           <Field 
-            name="FlightTime"
+            name="flightTime"
             component={this.renderField}
             label="FlightTime"
            />
@@ -80,7 +96,9 @@ class CreateFlight extends Component{
            label="Plane"
            component={this.renderField}
            />
-    
+          <button type="submit" blassName="btn btn-primary">Submit </button>
+          <Link to="/" className="btn btn-danger">Cancel</Link>
+        </form>
       </div>
     )
   }
@@ -100,8 +118,27 @@ class CreateFlight extends Component{
 //   }, dispatch)
 // } 
 // export default connect(mapStateToProps, mapDispatchToProps)(CreateFlight)
+function validate(values){
+  const errors = {}
+  if (!values.plane){
+    errors.plane = "Enter a Plane"
+  }
+  if (!values.destination){
+    errors.destination = "Enter a Destination"
+  }
+  if (!values.date){
+    errors.date = "Enter a Date"
+  }
+  if (!values.flightTime){
+    errors.flightTime = "Enter a Time"
+  }
+  return errors
+}
 export default reduxForm({
+  validate,
   form: 'FlightNewForm'
-})(CreateFlight)
+})(
+  connect(null, {addFlight})(CreateFlight
+))
 // export default CreateFlight
 
