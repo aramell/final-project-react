@@ -64,6 +64,19 @@ class CreateFlight extends Component{
         </div>
       </div>
     )
+    const timePicker = ({input, label, type, selected, className, meta: {touched, error}}) => {
+      <div>
+        <div>
+        <TimePicker {...input}
+        selected={selected} placeholder={label}
+        type={type}
+        className = {className}
+        showHour
+        showMinute
+        />
+        </div>
+      </div>
+    }
     return( 
       <div className="flight">
         <form onSubmit={handleSubmit((event) => this.onSubmit(event))}>
@@ -72,8 +85,15 @@ class CreateFlight extends Component{
             component={datePicker}
             label="date"
             type="text"
-            selected={this.renderfield}
+            selected={this.renderField}
           />
+          {/* <Field 
+            name ="time"
+            component={timePicker}
+            label="time"
+            type="text"
+            selected={this.renderField}
+            /> */}
           <Field 
             name="flightTime"
             component={this.renderField}

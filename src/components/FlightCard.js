@@ -48,6 +48,7 @@ class FlightCard extends Component{
   }
   handleDelete(event){
     const flight = this.props.flight
+    
     this.props.deleteFlight(flight)
   }
   render(){
