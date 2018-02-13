@@ -11,8 +11,12 @@ class HomePage extends React.Component{
   render(){
     return(
       <div className="header">
+        <div className="title">
           <h1>Flight Scheduler </h1>
+          </div>
+          <div className="weather-box">
           <WeatherContainer />
+          </div>
            <FlightIndex />
            {/* <Calendar /> */}
           

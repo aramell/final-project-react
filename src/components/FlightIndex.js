@@ -19,7 +19,7 @@ class FlightIndex extends React.Component {
   render (){
     
     return (
-      <div>
+      <div className="future-flights">
         <Flight flights={this.props.flights} match={this.props.match}/>
         {/* <ShowFlight /> */}
         {/* <Route path={`${this.props.match.url}/:flightId`} component={ShowFlight} />

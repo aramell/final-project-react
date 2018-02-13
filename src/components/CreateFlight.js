@@ -62,6 +62,7 @@ class CreateFlight extends Component{
    
     return( 
       <div className="flight">
+        <h3> New Flight </h3>
         <form onSubmit={handleSubmit((event) => this.onSubmit(event))}>
         <Field
             name="date"

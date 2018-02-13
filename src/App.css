@@ -9,12 +9,6 @@
   height: 80px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 100px;
-  padding: 20px;
-  color: white;
-}
 
 .App-title {
   font-size: 1.5em;
@@ -23,6 +17,21 @@
 .App-intro {
   font-size: large;
 }
+.header{
+  border: 3px solid red
+}
+.future-flights{
+  width: 700px;
+  border: 3px solid blue;
+}
+.title {
+  text-align: center;
+}
+.weather-box{
+  border: 2px solid blue;
+  width: 300px;
+}
+
 
 /* .create-flight{
   background-color: rgb(145, 145, 255);
