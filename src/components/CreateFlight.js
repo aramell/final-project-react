@@ -4,8 +4,7 @@ import { bindActionCreators } from 'redux';
 import { addFlight } from '../actions/flightActions';
 import DatePicker from 'react-date-picker'
 import {Field, reduxForm} from 'redux-form'
-import TimePicker from 'rc-time-picker'
-
+import TimePicker from 'react-times'
 import { Link } from 'react-router-dom';
 
 class CreateFlight extends Component{
@@ -28,6 +27,7 @@ class CreateFlight extends Component{
         <input className="form-control"
           type="text"
            {...field.input}
+           
       />
           {field.meta.touched ? field.meta.error : ''}
           {/* automatically added  */}
@@ -36,13 +36,8 @@ class CreateFlight extends Component{
   }
   onSubmit(value) {
     this.props.addFlight(value)
-    this.state = {
-      flightTime: '',
-      date: '',
-      planeNumber: '',
-      destination: '',
-      pilot: ''
-}
+    // debugger
+   this.props.reset()
 
   }
  
@@ -64,19 +59,7 @@ class CreateFlight extends Component{
         </div>
       </div>
     )
-    const timePicker = ({input, label, type, selected, className, meta: {touched, error}}) => {
-      <div>
-        <div>
-        <TimePicker {...input}
-        selected={selected} placeholder={label}
-        type={type}
-        className = {className}
-        showHour
-        showMinute
-        />
-        </div>
-      </div>
-    }
+   
     return( 
       <div className="flight">
         <form onSubmit={handleSubmit((event) => this.onSubmit(event))}>
@@ -86,18 +69,14 @@ class CreateFlight extends Component{
             label="date"
             type="text"
             selected={this.renderField}
+            value={this.state.value}    
           />
-          {/* <Field 
-            name ="time"
-            component={timePicker}
-            label="time"
-            type="text"
-            selected={this.renderField}
-            /> */}
+         
           <Field 
             name="flightTime"
             component={this.renderField}
             label="FlightTime"
+            value={this.state.value}            
            />
            <Field 
            name="destination"
