@@ -27,12 +27,13 @@ class FlightCard extends Component{
     
     this.props.deleteFlight(flight)
   }
+  
   render(){
       const date = this.props.flight.date
-
+// debugger
     return(
    
-    <div><ul><Link key={this.props.flight.id} to={`/flights/${this.props.flight.id}`}> Date: {moment(date).format('MMMM Do YYYY')} - Pilot: {this.props.flight.pilot} - Plane: {this.props.flight.planeNumber}- Destination: {this.props.flight.destination}</Link>
+    <div><ul><Link key={this.props.flight.id} to={`/flights/${this.props.flight.id}`}> Date: {moment(date).format('MMMM Do YYYY')} - Flight Time: {this.props.flight.flightTime} - Destination: {this.props.flight.destination}</Link>
 <Route path={`/flights/:flightId`} component={ShowFlight}/><button type="submit"  onClick={(event) => this.persistLike(event)}>Like</button> {this.props.flight.likes}<button type="submit" onClick={(event)=>this.handleDelete(event)}>Delete</button></ul></div>
       )
     }
