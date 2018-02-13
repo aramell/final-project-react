@@ -13,33 +13,9 @@ class FlightCard extends Component{
     super(props)
     this.state ={
       likes: ''
-
-      // id: this.props.flight.id,
-      // date: this.props.flight.date,
-      // planeNumber: this.props.flight.planeNumber,
-      // pilot: this.props.flight.pilot,
     }
   }
-  // handleClick = (event) =>{
-  //   debugg
-  //   this.setState({
-  //     likes: this.state.likes +1
-
-  //   })
-  //   debugger
-  // }
-  // callAPI(event){
-  //   fetch('http://localhost:3000/api/flights')
-  //   .then(res => {
-  //     if (res.status !== 200){
-  //       throw new Error("very bad request")
-  //     } 
-  //     else return res.json()
-  //     })
-    
-  //   //a,e,b,c + data, d + err,
-  
-  // }
+ 
 
   persistLike(event){
  
