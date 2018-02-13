@@ -56,7 +56,7 @@ class FlightCard extends Component{
     return(
    
     <div><ul><Link key={this.props.flight.id} to={`/flights/${this.props.flight.id}`}> Date: {moment(date).format('MMMM Do YYYY, h:mm:ss a')} - Pilot: {this.props.flight.pilot} - Plane: {this.props.flight.planeNumber}- Destination: {this.props.flight.destination}</Link>
-<Route path={`/flights/:flightId`} component={ShowFlight}/><button type="submit"  onClick={(event) => this.callAPI(event)}>Like</button> {this.props.flight.likes}<button type="submit" onClick={(event)=>this.handleDelete(event)}>Delete</button></ul></div>
+<Route path={`/flights/:flightId`} component={ShowFlight}/><button type="submit"  onClick={(event) => this.persistLike(event)}>Like</button> {this.props.flight.likes}<button type="submit" onClick={(event)=>this.handleDelete(event)}>Delete</button></ul></div>
       )
     }
     

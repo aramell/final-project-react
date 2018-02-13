@@ -21,30 +21,6 @@ class CreateFlight extends Component{
     }
     
   }
-//   handleChange = event =>{
-    
-//     const value = event.target.value
-//     const name = event.target.name
-//     this.setState({
-//         [name]: value
-//     })
-    
-//   }
-
-
-//   handleSubmit = event => {
-//     event.preventDefault()
-       
-//     this.props.addFlight(this.state)
-//     this.setState({
-//       flightTime: '',
-//       date: '',
-//       planeNumber: '',
-//       destination: '',
-//       pilot: ''
-//   })
-// }
-      
   renderField = field =>{
     return(
       <div className="form-group">
