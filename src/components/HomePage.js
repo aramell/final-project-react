@@ -4,6 +4,7 @@ import WeatherContainer from './WeatherContainer';
 import CreateFlight from './CreateFlight';
 import FlightIndex from './FlightIndex';
 import FlightPage from './FlightPage';
+// import TextBox from './Textbox'
 // import Calendar from '../containers/Calendar'
 
 class HomePage extends React.Component{
@@ -18,6 +19,7 @@ class HomePage extends React.Component{
           <WeatherContainer />
           </div>
            <FlightIndex />
+           {/* <TextBox /> */}
            {/* <Calendar /> */}
           
            {/* <FlightPage store={this.store}/>  */}
