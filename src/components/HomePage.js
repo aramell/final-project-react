@@ -6,6 +6,7 @@ import FlightIndex from './FlightIndex';
 import FlightPage from './FlightPage';
 import  '../images/planephoto.jpg'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../styles.css'
 // import TextBox from './Textbox'
 // import Calendar from '../containers/Calendar'
 
@@ -26,7 +27,7 @@ class HomePage extends React.Component{
           <h1>Flight Scheduler </h1>
           </div>
           <div className="weather-box">
-          <WeatherContainer />
+          <WeatherContainer className="" />
           </div>
            <FlightIndex />
            {/* <TextBox /> */}
