@@ -63,7 +63,8 @@ class CreateFlight extends Component{
     return( 
       <div className="flight">
         <h3> New Flight </h3>
-        <form onSubmit={handleSubmit((event) => this.onSubmit(event))}>
+        <form onSubmit={handleSubmit((event) => this.onSubmit(event))} >
+        <div className="form-group">
         <Field
             name="date"
             component={datePicker}
@@ -75,6 +76,7 @@ class CreateFlight extends Component{
          
           <Field 
             name="flightTime"
+            className="form-control"
             component={this.renderField}
             label="FlightTime"
             value={this.state.value}            
@@ -84,17 +86,14 @@ class CreateFlight extends Component{
            label="Destination"
            component={this.renderField}
            />
-           {/* <Field 
-           name="date"
-           label="Date"
-           component={this.renderField}
-           /> */}
-           <Field 
+      
+           <Field cla
            name="plane"
            label="Plane"
            component={this.renderField}
            />
-          <button type="submit" blassName="btn btn-primary">Submit </button>
+           </div>
+          <button type="submit" className="btn btn-primary">Submit </button>
           <Link to="/" className="btn btn-danger">Cancel</Link>
         </form>
       </div>
