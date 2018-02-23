@@ -36,7 +36,6 @@ class CreateFlight extends Component{
   }
   onSubmit(value) {
     this.props.addFlight(value)
-    // debugger
    this.props.reset()
 
   }
@@ -78,7 +77,7 @@ class CreateFlight extends Component{
             name="flightTime"
             className="form-control"
             component={this.renderField}
-            label="FlightTime"
+            label="Flight Time"
             value={this.state.value}            
            />
            <Field 

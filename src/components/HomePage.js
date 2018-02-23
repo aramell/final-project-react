@@ -17,14 +17,14 @@ class HomePage extends React.Component{
     const planeStyle = {
       top: 0,
       right: 0,
-      height: '50%',
-      width: '50%',
+      height: '95%',
+      width: '95%',
     }
     return(
       <div className="header">
         <div className="title">
+        <h1>Flight Scheduler </h1>
           <img src={require(`../images/planephoto.jpg`)} id="plane" style={planeStyle}/>
-          <h1>Flight Scheduler </h1>
           </div>
           <div className="weather-box">
           <WeatherContainer className="" />

@@ -13,16 +13,18 @@
   font-size:1.5em;
 }
 .header{
-  background-color: rgb(255, 255, 255)
+  background-color: rgb(230, 229, 248)
 }
 #plane{
-  background-size: 100%, 100%
+  width: auto;
+  height: auto;
 }
 .flight{
   width: 500px;
   padding-bottom: 70px;
+
 }
 .future-flights{
-  float: right;
+  float: center;
   width: auto;
 }

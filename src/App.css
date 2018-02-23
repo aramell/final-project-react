@@ -1,13 +1,6 @@
-.App {
-  text-align: center;
-  background: rgb(92, 60, 60)
-}
 
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
+
 
 
 .App-title {
@@ -18,18 +11,46 @@
   font-size: large;
 }
 .header{
-  border: 3px solid red
+  display: grid;
+grid-gap: 1rem;
+grid-template-columns: 1fr 5fr 2.5fr;
+grid-template-rows: 1fr 6fr 3fr;
+grid-template-areas:
+"header header header"
+"sidebar main aside"
+"sidebar bottom bottom";
+  border: 1px solid black
 }
 .future-flights{
+  grid-area: bottom;
   width: 700px;
-  border: 3px solid blue;
+  border:1px solid blue;
 }
 .title {
+  grid-area: main;
   text-align: center;
+  padding-bottom: 10px;
 }
 .weather-box{
-  border: 2px solid blue;
+  /* grid-column: 1;
+  grid-row:2; */
+  grid-area: sidebar;
+  border: 1px solid blue;
   width: 300px;
+}
+.flight{
+  grid-area: aside;
+}
+ul{
+  list-style: none;
+}
+li{
+  color: #333;
+  
+}
+.navbar{
+  background: #eaeaea;
+
 }
 
 
