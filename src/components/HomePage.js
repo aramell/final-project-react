@@ -8,7 +8,7 @@ import  '../images/planephoto.jpg'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles.css'
 // import TextBox from './Textbox'
-// import Calendar from '../containers/Calendar'
+import Calendar from '../containers/Calendar'
 
 class HomePage extends React.Component{
  
@@ -31,7 +31,8 @@ class HomePage extends React.Component{
           </div>
            <FlightIndex />
            {/* <TextBox /> */}
-           {/* <Calendar /> */}
+           <Calendar />
+          
           
            {/* <FlightPage store={this.store}/>  */}
           <CreateFlight />

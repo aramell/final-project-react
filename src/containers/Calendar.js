@@ -1,58 +1,45 @@
 import BigCalendar from 'react-big-calendar'
 import React from 'react'
 import moment from 'moment'
-import events from '../events'
+import events from '../events
+
+  BigCalendar.momentLocalizer(moment)
 
 class Calendar extends React.Component {
-  constructor(props){
-    super(props)
-    BigCalendar.momentLocalizer(moment);
-    let allViews = Object.keys(BigCalendar.views).map(k => BigCalendar.views[k])
-
-    debugger
-  }
-  
-  myEventsList = () =>{
-
-  }
-
-// function Event({ event }) {
-//     return (
-//         <span>
-//       <strong>
-//       {event.title}
-//       </strong>
-//             { event.desc && (':  ' + event.desc)}
-//     </span>
-//     )
-// }
-
- EventAgenda = ({ event }) => {
-    return <span>
-    <em style={{ color: 'magenta'}}>{event.title}</em >  <p>{ event.desc }</p> </span>
-}
-
-  // function Even
-
-  render(){
-    return (
 
 
-    <BigCalendar
-        // events={myEventsList}
-        // views={allViews}
-        // step={30}
-        // timeslots={2}
-        // defaultView='week'
-        // defaultDate={new Date()}
-        // components={{
-        //              event: Event,
-        //              agenda: {
-        //                       event: EventAgenda
-        //          }
-        // }}
-       />
-    )}
+    render(){
+      const myEventsList = 
+      [
+        {
+          id: 0,
+          title: 'All Day Event very long title',
+          allDay: true,
+          start: new Date(2018, 3, 0),
+          end: new Date(2018, 3, 1),
+        },
+        {
+          id: 1,
+          title: 'Long Event',
+          start: new Date(2018, 3, 7),
+          end: new Date(2018, 3, 10),
+        },
+      
+     
+      ]
+      let allViews = Object.keys(BigCalendar.Views).map(k => BigCalendar.Views[k])
+
+      return(
+        <div>
+          <BigCalendar
+        events={myEventsList}
+        startAccessor='startDate'
+         endAccessor='endDate'
+         defaultDate = {new Date(2018, 3, 21)}
+      />
+      </div>
+      )
+    }
 
   }
 export default Calendar
