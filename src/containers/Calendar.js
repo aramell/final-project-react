@@ -1,11 +1,16 @@
 import BigCalendar from 'react-big-calendar'
 import React from 'react'
 import moment from 'moment'
-import events from '../events
+import { connect } from 'react-redux';
+
 
   BigCalendar.momentLocalizer(moment)
 
 class Calendar extends React.Component {
+  constructor(props){
+    super(props)
+
+  }
 
 
     render(){
@@ -42,4 +47,10 @@ class Calendar extends React.Component {
     }
 
   }
-export default Calendar
+  const mapStateToProps = state =>{
+    
+    return {
+      flights: state.flights
+    }
+  }
+export default connect(mapStateToProps)(Calendar)
