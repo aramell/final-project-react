@@ -2,7 +2,7 @@ import BigCalendar from 'react-big-calendar'
 import React from 'react'
 import moment from 'moment'
 import { connect } from 'react-redux';
-
+import 'react-big-calendar/lib/css/react-big-calendar.css'
 
   BigCalendar.momentLocalizer(moment)
 
@@ -14,6 +14,7 @@ class Calendar extends React.Component {
 
 
     render(){
+      // debugger
       const myEventsList = 
       [
         {
@@ -38,8 +39,10 @@ class Calendar extends React.Component {
         <div>
           <BigCalendar
         events={myEventsList}
+        views={allViews}
         startAccessor='startDate'
          endAccessor='endDate'
+         showMultiDayTimes
          defaultDate = {new Date(2018, 3, 21)}
       />
       </div>
