@@ -32,12 +32,8 @@ const ShowFlight = ({flight}) => {
     }else {
       return {flight: {}}
     }
-    // return{
-    //   movieId: ownProps.match.params.id
-    // }
   }
     
   
   
   export default connect(mapStateToProps)(ShowFlight)
-  // export default ShowFlight

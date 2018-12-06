@@ -9,27 +9,20 @@ import 'react-big-calendar/lib/css/react-big-calendar.css'
 class Calendar extends React.Component {
   constructor(props){
     super(props)
-
+    
+    
+    
   }
 
 
     render(){
-      // debugger
+      const flights = this.props.flights.map((flight) =>{
+        return flight
+      })
+      
       const myEventsList = 
       [
-        {
-          id: 0,
-          title: 'All Day Event very long title',
-          allDay: true,
-          start: new Date(2018, 3, 0),
-          end: new Date(2018, 3, 1),
-        },
-        {
-          id: 1,
-          title: 'Long Event',
-          start: new Date(2018, 3, 7),
-          end: new Date(2018, 3, 10),
-        },
+       {flights}
       
      
       ]
@@ -38,19 +31,20 @@ class Calendar extends React.Component {
       return(
         <div>
           <BigCalendar
-        events={myEventsList}
-        views={allViews}
-        startAccessor='startDate'
-         endAccessor='endDate'
-         showMultiDayTimes
-         defaultDate = {new Date(2018, 3, 21)}
+          events={myEventsList}
+          views={allViews}
+          type={60}
+          startAccessor='startDate'
+          endAccessor='endDate'
+          showMultiDayTimes
+          defaultDate = {new Date(2018, 3, 21)}
       />
       </div>
       )
     }
 
   }
-  const mapStateToProps = state =>{
+  function mapStateToProps(state) {
     
     return {
       flights: state.flights

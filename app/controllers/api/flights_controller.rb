@@ -52,7 +52,7 @@ class Api::FlightsController < ApplicationController
 
   private
   def flight_params
-    params.require(:flight).permit(:time, :date, :pilot,:flightTime, :plane_id, :id, :created_at, :updated_at, :planeNumber, :squawks, :destination, :likes)
+    params.require(:flight).permit(:time, :date, :pilot,:flightTime, :startTime, :endTime, :plane_id, :id, :created_at, :updated_at, :planeNumber, :squawks, :destination, :likes)
   end
   def set_flight
     @flight = Flight.find_by(:id => params[:id])

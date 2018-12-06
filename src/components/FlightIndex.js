@@ -17,10 +17,10 @@ class FlightIndex extends React.Component {
   }
 
   render (){
-    
+    const { flights, match } = this.props
     return (
       <div className="future-flights">
-        <Flight flights={this.props.flights} match={this.props.match}/>
+        <Flight flights={flights} match={match}/>
         {/* <ShowFlight /> */}
         {/* <Route path={`${this.props.match.url}/:flightId`} component={ShowFlight} />
         <Route exact path={this.props.match.url} render={()=> (<h3> Please select a flight to view more.</h3>)}/> */}

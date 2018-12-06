@@ -13,6 +13,8 @@ class CreateFlight extends Component{
     
     this.state = {
           flightTime: '',
+          startTime: '',
+          endTime: '',
           date: '',
           planeNumber: '',
           destination: '',

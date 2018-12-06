@@ -5,7 +5,7 @@ import FlightCard from './FlightCard'
 
 
  
-const Flight = ({match, flights}) => {
+const Flight = ({flights}) => {
   
   const sortedFlights = flights.sort(function (a,b){
     return b.likes - a.likes
@@ -19,7 +19,7 @@ const Flight = ({match, flights}) => {
       <h2> Future Flights </h2>
       {renderFlights}
       
-      {/* {flights ? renderFlights : "none"} */}
+      {flights ? renderFlights : "none"}
       
     </div>
   )
